@@ -35,6 +35,14 @@
 		26E24CFA254DC43E00151CB5 /* RootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24CF3254DC43E00151CB5 /* RootNavigationController.swift */; };
 		26E24CFB254DC43E00151CB5 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24CF4254DC43E00151CB5 /* RootViewController.swift */; };
 		26E24CFC254DC43E00151CB5 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24CF4254DC43E00151CB5 /* RootViewController.swift */; };
+		26E24D01254E15BA00151CB5 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D00254E15BA00151CB5 /* Album.swift */; };
+		26E24D02254E15BA00151CB5 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D00254E15BA00151CB5 /* Album.swift */; };
+		26E24D04254E191900151CB5 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D03254E191900151CB5 /* Artist.swift */; };
+		26E24D05254E191900151CB5 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D03254E191900151CB5 /* Artist.swift */; };
+		26E24D09254E1A0600151CB5 /* SearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D08254E1A0600151CB5 /* SearchRepository.swift */; };
+		26E24D0A254E1A0600151CB5 /* SearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D08254E1A0600151CB5 /* SearchRepository.swift */; };
+		26E24D0C254E1A2200151CB5 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D0B254E1A2200151CB5 /* SearchResponse.swift */; };
+		26E24D0D254E1A2200151CB5 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D0B254E1A2200151CB5 /* SearchResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +78,10 @@
 		26E24CF2254DC43E00151CB5 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		26E24CF3254DC43E00151CB5 /* RootNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootNavigationController.swift; sourceTree = "<group>"; };
 		26E24CF4254DC43E00151CB5 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		26E24D00254E15BA00151CB5 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		26E24D03254E191900151CB5 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		26E24D08254E1A0600151CB5 /* SearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepository.swift; sourceTree = "<group>"; };
+		26E24D0B254E1A2200151CB5 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,7 +177,10 @@
 		26E24CD4254DC37E00151CB5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				26E24CFF254E15A700151CB5 /* Artist */,
+				26E24CFE254E154100151CB5 /* Album */,
 				26E24CED254DC3F800151CB5 /* APIRequest */,
+				26E24D06254E19C000151CB5 /* Repositories */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -173,6 +188,7 @@
 		26E24CD5254DC38400151CB5 /* ViewModules */ = {
 			isa = PBXGroup;
 			children = (
+				26E24CFD254DC78400151CB5 /* New Group */,
 			);
 			path = ViewModules;
 			sourceTree = "<group>";
@@ -204,6 +220,46 @@
 				26E24CEE254DC40A00151CB5 /* APIRequest.swift */,
 			);
 			path = APIRequest;
+			sourceTree = "<group>";
+		};
+		26E24CFD254DC78400151CB5 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		26E24CFE254E154100151CB5 /* Album */ = {
+			isa = PBXGroup;
+			children = (
+				26E24D00254E15BA00151CB5 /* Album.swift */,
+			);
+			path = Album;
+			sourceTree = "<group>";
+		};
+		26E24CFF254E15A700151CB5 /* Artist */ = {
+			isa = PBXGroup;
+			children = (
+				26E24D03254E191900151CB5 /* Artist.swift */,
+			);
+			path = Artist;
+			sourceTree = "<group>";
+		};
+		26E24D06254E19C000151CB5 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				26E24D07254E19EB00151CB5 /* Search */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		26E24D07254E19EB00151CB5 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				26E24D0B254E1A2200151CB5 /* SearchResponse.swift */,
+				26E24D08254E1A0600151CB5 /* SearchRepository.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,12 +364,16 @@
 				26E24CF7254DC43E00151CB5 /* AppCoordinator.swift in Sources */,
 				26E24CF5254DC43E00151CB5 /* AppSession.swift in Sources */,
 				26E24CE2254DC39C00151CB5 /* String+Utils.swift in Sources */,
+				26E24D04254E191900151CB5 /* Artist.swift in Sources */,
 				26E24CA1254DC28500151CB5 /* AppDelegate.swift in Sources */,
 				26E24CFB254DC43E00151CB5 /* RootViewController.swift in Sources */,
 				26E24CEB254DC3BE00151CB5 /* TextFieldPubisher.swift in Sources */,
+				26E24D09254E1A0600151CB5 /* SearchRepository.swift in Sources */,
 				26E24CF9254DC43E00151CB5 /* RootNavigationController.swift in Sources */,
 				26E24CE0254DC39C00151CB5 /* UITextFIeld+Utils.swift in Sources */,
 				26E24CE9254DC3BE00151CB5 /* ButtonPublisher.swift in Sources */,
+				26E24D01254E15BA00151CB5 /* Album.swift in Sources */,
+				26E24D0C254E1A2200151CB5 /* SearchResponse.swift in Sources */,
 				26E24CDC254DC39C00151CB5 /* UIView+Constraints.swift in Sources */,
 				26E24CDE254DC39C00151CB5 /* UIColor+Utils.swift in Sources */,
 				26E24CE4254DC39C00151CB5 /* WaterfallGridLayout.swift in Sources */,
@@ -328,12 +388,16 @@
 				26E24CF8254DC43E00151CB5 /* AppCoordinator.swift in Sources */,
 				26E24CF6254DC43E00151CB5 /* AppSession.swift in Sources */,
 				26E24CE3254DC39C00151CB5 /* String+Utils.swift in Sources */,
+				26E24D05254E191900151CB5 /* Artist.swift in Sources */,
 				26E24CDF254DC39C00151CB5 /* UIColor+Utils.swift in Sources */,
 				26E24CFC254DC43E00151CB5 /* RootViewController.swift in Sources */,
 				26E24CE1254DC39C00151CB5 /* UITextFIeld+Utils.swift in Sources */,
+				26E24D0A254E1A0600151CB5 /* SearchRepository.swift in Sources */,
 				26E24CFA254DC43E00151CB5 /* RootNavigationController.swift in Sources */,
 				26E24CEA254DC3BE00151CB5 /* ButtonPublisher.swift in Sources */,
 				26E24CBA254DC28600151CB5 /* MusicPediaTests.swift in Sources */,
+				26E24D02254E15BA00151CB5 /* Album.swift in Sources */,
+				26E24D0D254E1A2200151CB5 /* SearchResponse.swift in Sources */,
 				26E24CEC254DC3BE00151CB5 /* TextFieldPubisher.swift in Sources */,
 				26E24CE5254DC39C00151CB5 /* WaterfallGridLayout.swift in Sources */,
 				26E24CF0254DC40A00151CB5 /* APIRequest.swift in Sources */,

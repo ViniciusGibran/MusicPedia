@@ -37,7 +37,7 @@ final class APIError: Error, LocalizedError {
     var errorDescription: String {
         switch errorType {
         case .unknown:
-            return "We are sorry. Something went wrong! 💔"
+            return "Oops. Something went wrong! 💔"
         case .apiError(let reason):
             return reason
         case .notFound:

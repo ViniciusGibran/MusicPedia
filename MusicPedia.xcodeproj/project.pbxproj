@@ -8,25 +8,37 @@
 
 /* Begin PBXBuildFile section */
 		26E24CA1254DC28500151CB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24CA0254DC28500151CB5 /* AppDelegate.swift */; };
-		26E24CA3254DC28500151CB5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24CA2254DC28500151CB5 /* SceneDelegate.swift */; };
-		26E24CA5254DC28500151CB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24CA4254DC28500151CB5 /* ViewController.swift */; };
-		26E24CA8254DC28500151CB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26E24CA6254DC28500151CB5 /* Main.storyboard */; };
-		26E24CAA254DC28500151CB5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24CA9254DC28500151CB5 /* ContentView.swift */; };
 		26E24CAC254DC28600151CB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26E24CAB254DC28600151CB5 /* Assets.xcassets */; };
 		26E24CAF254DC28600151CB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26E24CAD254DC28600151CB5 /* LaunchScreen.storyboard */; };
 		26E24CBA254DC28600151CB5 /* MusicPediaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24CB9254DC28600151CB5 /* MusicPediaTests.swift */; };
-		26E24CC5254DC28600151CB5 /* MusicPediaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24CC4254DC28600151CB5 /* MusicPediaUITests.swift */; };
+		26E24CDC254DC39C00151CB5 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24CD7254DC39C00151CB5 /* UIView+Constraints.swift */; };
+		26E24CDD254DC39C00151CB5 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24CD7254DC39C00151CB5 /* UIView+Constraints.swift */; };
+		26E24CDE254DC39C00151CB5 /* UIColor+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24CD8254DC39C00151CB5 /* UIColor+Utils.swift */; };
+		26E24CDF254DC39C00151CB5 /* UIColor+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24CD8254DC39C00151CB5 /* UIColor+Utils.swift */; };
+		26E24CE0254DC39C00151CB5 /* UITextFIeld+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24CD9254DC39C00151CB5 /* UITextFIeld+Utils.swift */; };
+		26E24CE1254DC39C00151CB5 /* UITextFIeld+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24CD9254DC39C00151CB5 /* UITextFIeld+Utils.swift */; };
+		26E24CE2254DC39C00151CB5 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24CDA254DC39C00151CB5 /* String+Utils.swift */; };
+		26E24CE3254DC39C00151CB5 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24CDA254DC39C00151CB5 /* String+Utils.swift */; };
+		26E24CE4254DC39C00151CB5 /* WaterfallGridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24CDB254DC39C00151CB5 /* WaterfallGridLayout.swift */; };
+		26E24CE5254DC39C00151CB5 /* WaterfallGridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24CDB254DC39C00151CB5 /* WaterfallGridLayout.swift */; };
+		26E24CE9254DC3BE00151CB5 /* ButtonPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24CE7254DC3BE00151CB5 /* ButtonPublisher.swift */; };
+		26E24CEA254DC3BE00151CB5 /* ButtonPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24CE7254DC3BE00151CB5 /* ButtonPublisher.swift */; };
+		26E24CEB254DC3BE00151CB5 /* TextFieldPubisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24CE8254DC3BE00151CB5 /* TextFieldPubisher.swift */; };
+		26E24CEC254DC3BE00151CB5 /* TextFieldPubisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24CE8254DC3BE00151CB5 /* TextFieldPubisher.swift */; };
+		26E24CEF254DC40A00151CB5 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24CEE254DC40A00151CB5 /* APIRequest.swift */; };
+		26E24CF0254DC40A00151CB5 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24CEE254DC40A00151CB5 /* APIRequest.swift */; };
+		26E24CF5254DC43E00151CB5 /* AppSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24CF1254DC43E00151CB5 /* AppSession.swift */; };
+		26E24CF6254DC43E00151CB5 /* AppSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24CF1254DC43E00151CB5 /* AppSession.swift */; };
+		26E24CF7254DC43E00151CB5 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24CF2254DC43E00151CB5 /* AppCoordinator.swift */; };
+		26E24CF8254DC43E00151CB5 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24CF2254DC43E00151CB5 /* AppCoordinator.swift */; };
+		26E24CF9254DC43E00151CB5 /* RootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24CF3254DC43E00151CB5 /* RootNavigationController.swift */; };
+		26E24CFA254DC43E00151CB5 /* RootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24CF3254DC43E00151CB5 /* RootNavigationController.swift */; };
+		26E24CFB254DC43E00151CB5 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24CF4254DC43E00151CB5 /* RootViewController.swift */; };
+		26E24CFC254DC43E00151CB5 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24CF4254DC43E00151CB5 /* RootViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		26E24CB6254DC28600151CB5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 26E24C95254DC28500151CB5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 26E24C9C254DC28500151CB5;
-			remoteInfo = MusicPedia;
-		};
-		26E24CC1254DC28600151CB5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 26E24C95254DC28500151CB5 /* Project object */;
 			proxyType = 1;
@@ -38,19 +50,26 @@
 /* Begin PBXFileReference section */
 		26E24C9D254DC28500151CB5 /* MusicPedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26E24CA0254DC28500151CB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		26E24CA2254DC28500151CB5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		26E24CA4254DC28500151CB5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		26E24CA7254DC28500151CB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		26E24CA9254DC28500151CB5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		26E24CAB254DC28600151CB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26E24CAE254DC28600151CB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		26E24CB0254DC28600151CB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26E24CB5254DC28600151CB5 /* MusicPediaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicPediaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26E24CB9254DC28600151CB5 /* MusicPediaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPediaTests.swift; sourceTree = "<group>"; };
 		26E24CBB254DC28600151CB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		26E24CC0254DC28600151CB5 /* MusicPediaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicPediaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26E24CC4254DC28600151CB5 /* MusicPediaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPediaUITests.swift; sourceTree = "<group>"; };
 		26E24CC6254DC28600151CB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26E24CD7254DC39C00151CB5 /* UIView+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		26E24CD8254DC39C00151CB5 /* UIColor+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Utils.swift"; sourceTree = "<group>"; };
+		26E24CD9254DC39C00151CB5 /* UITextFIeld+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextFIeld+Utils.swift"; sourceTree = "<group>"; };
+		26E24CDA254DC39C00151CB5 /* String+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
+		26E24CDB254DC39C00151CB5 /* WaterfallGridLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterfallGridLayout.swift; sourceTree = "<group>"; };
+		26E24CE7254DC3BE00151CB5 /* ButtonPublisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonPublisher.swift; sourceTree = "<group>"; };
+		26E24CE8254DC3BE00151CB5 /* TextFieldPubisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldPubisher.swift; sourceTree = "<group>"; };
+		26E24CEE254DC40A00151CB5 /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		26E24CF1254DC43E00151CB5 /* AppSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSession.swift; sourceTree = "<group>"; };
+		26E24CF2254DC43E00151CB5 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		26E24CF3254DC43E00151CB5 /* RootNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootNavigationController.swift; sourceTree = "<group>"; };
+		26E24CF4254DC43E00151CB5 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,13 +81,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		26E24CB2254DC28600151CB5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		26E24CBD254DC28600151CB5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -93,7 +105,6 @@
 			children = (
 				26E24C9D254DC28500151CB5 /* MusicPedia.app */,
 				26E24CB5254DC28600151CB5 /* MusicPediaTests.xctest */,
-				26E24CC0254DC28600151CB5 /* MusicPediaUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,14 +112,11 @@
 		26E24C9F254DC28500151CB5 /* MusicPedia */ = {
 			isa = PBXGroup;
 			children = (
-				26E24CA0254DC28500151CB5 /* AppDelegate.swift */,
-				26E24CA2254DC28500151CB5 /* SceneDelegate.swift */,
-				26E24CA4254DC28500151CB5 /* ViewController.swift */,
-				26E24CA6254DC28500151CB5 /* Main.storyboard */,
-				26E24CA9254DC28500151CB5 /* ContentView.swift */,
-				26E24CAB254DC28600151CB5 /* Assets.xcassets */,
-				26E24CAD254DC28600151CB5 /* LaunchScreen.storyboard */,
-				26E24CB0254DC28600151CB5 /* Info.plist */,
+				26E24CD6254DC38A00151CB5 /* Roots */,
+				26E24CD5254DC38400151CB5 /* ViewModules */,
+				26E24CD4254DC37E00151CB5 /* Models */,
+				26E24CD3254DC37800151CB5 /* Resources */,
+				26E24CD2254DC35F00151CB5 /* Utils Libs */,
 			);
 			path = MusicPedia;
 			sourceTree = "<group>";
@@ -129,6 +137,73 @@
 				26E24CC6254DC28600151CB5 /* Info.plist */,
 			);
 			path = MusicPediaUITests;
+			sourceTree = "<group>";
+		};
+		26E24CD2254DC35F00151CB5 /* Utils Libs */ = {
+			isa = PBXGroup;
+			children = (
+				26E24CE6254DC3A700151CB5 /* CombineCocoaPublishers */,
+				26E24CDA254DC39C00151CB5 /* String+Utils.swift */,
+				26E24CD8254DC39C00151CB5 /* UIColor+Utils.swift */,
+				26E24CD9254DC39C00151CB5 /* UITextFIeld+Utils.swift */,
+				26E24CD7254DC39C00151CB5 /* UIView+Constraints.swift */,
+				26E24CDB254DC39C00151CB5 /* WaterfallGridLayout.swift */,
+			);
+			path = "Utils Libs";
+			sourceTree = "<group>";
+		};
+		26E24CD3254DC37800151CB5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				26E24CAB254DC28600151CB5 /* Assets.xcassets */,
+				26E24CAD254DC28600151CB5 /* LaunchScreen.storyboard */,
+				26E24CB0254DC28600151CB5 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		26E24CD4254DC37E00151CB5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				26E24CED254DC3F800151CB5 /* APIRequest */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		26E24CD5254DC38400151CB5 /* ViewModules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModules;
+			sourceTree = "<group>";
+		};
+		26E24CD6254DC38A00151CB5 /* Roots */ = {
+			isa = PBXGroup;
+			children = (
+				26E24CA0254DC28500151CB5 /* AppDelegate.swift */,
+				26E24CF2254DC43E00151CB5 /* AppCoordinator.swift */,
+				26E24CF1254DC43E00151CB5 /* AppSession.swift */,
+				26E24CF3254DC43E00151CB5 /* RootNavigationController.swift */,
+				26E24CF4254DC43E00151CB5 /* RootViewController.swift */,
+			);
+			path = Roots;
+			sourceTree = "<group>";
+		};
+		26E24CE6254DC3A700151CB5 /* CombineCocoaPublishers */ = {
+			isa = PBXGroup;
+			children = (
+				26E24CE7254DC3BE00151CB5 /* ButtonPublisher.swift */,
+				26E24CE8254DC3BE00151CB5 /* TextFieldPubisher.swift */,
+			);
+			path = CombineCocoaPublishers;
+			sourceTree = "<group>";
+		};
+		26E24CED254DC3F800151CB5 /* APIRequest */ = {
+			isa = PBXGroup;
+			children = (
+				26E24CEE254DC40A00151CB5 /* APIRequest.swift */,
+			);
+			path = APIRequest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,24 +244,6 @@
 			productReference = 26E24CB5254DC28600151CB5 /* MusicPediaTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		26E24CBF254DC28600151CB5 /* MusicPediaUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 26E24CCF254DC28600151CB5 /* Build configuration list for PBXNativeTarget "MusicPediaUITests" */;
-			buildPhases = (
-				26E24CBC254DC28600151CB5 /* Sources */,
-				26E24CBD254DC28600151CB5 /* Frameworks */,
-				26E24CBE254DC28600151CB5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				26E24CC2254DC28600151CB5 /* PBXTargetDependency */,
-			);
-			name = MusicPediaUITests;
-			productName = MusicPediaUITests;
-			productReference = 26E24CC0254DC28600151CB5 /* MusicPediaUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -200,10 +257,6 @@
 						CreatedOnToolsVersion = 12.0;
 					};
 					26E24CB4254DC28600151CB5 = {
-						CreatedOnToolsVersion = 12.0;
-						TestTargetID = 26E24C9C254DC28500151CB5;
-					};
-					26E24CBF254DC28600151CB5 = {
 						CreatedOnToolsVersion = 12.0;
 						TestTargetID = 26E24C9C254DC28500151CB5;
 					};
@@ -224,7 +277,6 @@
 			targets = (
 				26E24C9C254DC28500151CB5 /* MusicPedia */,
 				26E24CB4254DC28600151CB5 /* MusicPediaTests */,
-				26E24CBF254DC28600151CB5 /* MusicPediaUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -236,18 +288,10 @@
 			files = (
 				26E24CAF254DC28600151CB5 /* LaunchScreen.storyboard in Resources */,
 				26E24CAC254DC28600151CB5 /* Assets.xcassets in Resources */,
-				26E24CA8254DC28500151CB5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		26E24CB3254DC28600151CB5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		26E24CBE254DC28600151CB5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -261,10 +305,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26E24CA5254DC28500151CB5 /* ViewController.swift in Sources */,
+				26E24CF7254DC43E00151CB5 /* AppCoordinator.swift in Sources */,
+				26E24CF5254DC43E00151CB5 /* AppSession.swift in Sources */,
+				26E24CE2254DC39C00151CB5 /* String+Utils.swift in Sources */,
 				26E24CA1254DC28500151CB5 /* AppDelegate.swift in Sources */,
-				26E24CAA254DC28500151CB5 /* ContentView.swift in Sources */,
-				26E24CA3254DC28500151CB5 /* SceneDelegate.swift in Sources */,
+				26E24CFB254DC43E00151CB5 /* RootViewController.swift in Sources */,
+				26E24CEB254DC3BE00151CB5 /* TextFieldPubisher.swift in Sources */,
+				26E24CF9254DC43E00151CB5 /* RootNavigationController.swift in Sources */,
+				26E24CE0254DC39C00151CB5 /* UITextFIeld+Utils.swift in Sources */,
+				26E24CE9254DC3BE00151CB5 /* ButtonPublisher.swift in Sources */,
+				26E24CDC254DC39C00151CB5 /* UIView+Constraints.swift in Sources */,
+				26E24CDE254DC39C00151CB5 /* UIColor+Utils.swift in Sources */,
+				26E24CE4254DC39C00151CB5 /* WaterfallGridLayout.swift in Sources */,
+				26E24CEF254DC40A00151CB5 /* APIRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,15 +325,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26E24CF8254DC43E00151CB5 /* AppCoordinator.swift in Sources */,
+				26E24CF6254DC43E00151CB5 /* AppSession.swift in Sources */,
+				26E24CE3254DC39C00151CB5 /* String+Utils.swift in Sources */,
+				26E24CDF254DC39C00151CB5 /* UIColor+Utils.swift in Sources */,
+				26E24CFC254DC43E00151CB5 /* RootViewController.swift in Sources */,
+				26E24CE1254DC39C00151CB5 /* UITextFIeld+Utils.swift in Sources */,
+				26E24CFA254DC43E00151CB5 /* RootNavigationController.swift in Sources */,
+				26E24CEA254DC3BE00151CB5 /* ButtonPublisher.swift in Sources */,
 				26E24CBA254DC28600151CB5 /* MusicPediaTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		26E24CBC254DC28600151CB5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				26E24CC5254DC28600151CB5 /* MusicPediaUITests.swift in Sources */,
+				26E24CEC254DC3BE00151CB5 /* TextFieldPubisher.swift in Sources */,
+				26E24CE5254DC39C00151CB5 /* WaterfallGridLayout.swift in Sources */,
+				26E24CF0254DC40A00151CB5 /* APIRequest.swift in Sources */,
+				26E24CDD254DC39C00151CB5 /* UIView+Constraints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,22 +349,9 @@
 			target = 26E24C9C254DC28500151CB5 /* MusicPedia */;
 			targetProxy = 26E24CB6254DC28600151CB5 /* PBXContainerItemProxy */;
 		};
-		26E24CC2254DC28600151CB5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 26E24C9C254DC28500151CB5 /* MusicPedia */;
-			targetProxy = 26E24CC1254DC28600151CB5 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		26E24CA6254DC28500151CB5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				26E24CA7254DC28500151CB5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		26E24CAD254DC28600151CB5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,7 +486,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TCUWJ83M7D;
-				INFOPLIST_FILE = MusicPedia/Info.plist;
+				INFOPLIST_FILE = MusicPedia/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -450,7 +494,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.musicpedia.viniciusgibran.MusicPedia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -461,7 +505,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TCUWJ83M7D;
-				INFOPLIST_FILE = MusicPedia/Info.plist;
+				INFOPLIST_FILE = MusicPedia/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -469,7 +513,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.musicpedia.viniciusgibran.MusicPedia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -517,46 +561,6 @@
 			};
 			name = Release;
 		};
-		26E24CD0254DC28600151CB5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TCUWJ83M7D;
-				INFOPLIST_FILE = MusicPediaUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.musicpedia.viniciusgibran.MusicPediaUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MusicPedia;
-			};
-			name = Debug;
-		};
-		26E24CD1254DC28600151CB5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TCUWJ83M7D;
-				INFOPLIST_FILE = MusicPediaUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.musicpedia.viniciusgibran.MusicPediaUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MusicPedia;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -583,15 +587,6 @@
 			buildConfigurations = (
 				26E24CCD254DC28600151CB5 /* Debug */,
 				26E24CCE254DC28600151CB5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		26E24CCF254DC28600151CB5 /* Build configuration list for PBXNativeTarget "MusicPediaUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				26E24CD0254DC28600151CB5 /* Debug */,
-				26E24CD1254DC28600151CB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

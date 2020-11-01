@@ -51,8 +51,8 @@
 		26E24D17254E58A300151CB5 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D15254E58A300151CB5 /* HeaderView.swift */; };
 		26E24D19254E58D000151CB5 /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D18254E58D000151CB5 /* AlbumCell.swift */; };
 		26E24D1A254E58D000151CB5 /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D18254E58D000151CB5 /* AlbumCell.swift */; };
-		26E24D1F254E5AAF00151CB5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D1E254E5AAF00151CB5 /* SearchViewController.swift */; };
-		26E24D20254E5AAF00151CB5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D1E254E5AAF00151CB5 /* SearchViewController.swift */; };
+		26E24D1F254E5AAF00151CB5 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D1E254E5AAF00151CB5 /* SearchView.swift */; };
+		26E24D20254E5AAF00151CB5 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D1E254E5AAF00151CB5 /* SearchView.swift */; };
 		26E24D22254E5AE900151CB5 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D21254E5AE900151CB5 /* SearchViewModel.swift */; };
 		26E24D23254E5AE900151CB5 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D21254E5AE900151CB5 /* SearchViewModel.swift */; };
 		26E24D28254E5C0700151CB5 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D24254E5C0700151CB5 /* TagView.swift */; };
@@ -114,7 +114,7 @@
 		26E24D12254E380F00151CB5 /* AlbumsGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsGridViewModel.swift; sourceTree = "<group>"; };
 		26E24D15254E58A300151CB5 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		26E24D18254E58D000151CB5 /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
-		26E24D1E254E5AAF00151CB5 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		26E24D1E254E5AAF00151CB5 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		26E24D21254E5AE900151CB5 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		26E24D24254E5C0700151CB5 /* TagView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		26E24D25254E5C0700151CB5 /* StateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateView.swift; sourceTree = "<group>"; };
@@ -322,7 +322,7 @@
 			children = (
 				26E24D1D254E5A6500151CB5 /* StateView */,
 				26E24D1C254E5A5800151CB5 /* Subviews */,
-				26E24D1E254E5AAF00151CB5 /* SearchViewController.swift */,
+				26E24D1E254E5AAF00151CB5 /* SearchView.swift */,
 				26E24D21254E5AE900151CB5 /* SearchViewModel.swift */,
 			);
 			path = SearchView;
@@ -466,7 +466,7 @@
 				26E24CF9254DC43E00151CB5 /* RootNavigationController.swift in Sources */,
 				26E24CE0254DC39C00151CB5 /* UITextFIeld+Utils.swift in Sources */,
 				26E24CE9254DC3BE00151CB5 /* ButtonPublisher.swift in Sources */,
-				26E24D1F254E5AAF00151CB5 /* SearchViewController.swift in Sources */,
+				26E24D1F254E5AAF00151CB5 /* SearchView.swift in Sources */,
 				26E24D01254E15BA00151CB5 /* Album.swift in Sources */,
 				26E24D22254E5AE900151CB5 /* SearchViewModel.swift in Sources */,
 				26E24D0C254E1A2200151CB5 /* SearchResponse.swift in Sources */,
@@ -504,7 +504,7 @@
 				26E24CFA254DC43E00151CB5 /* RootNavigationController.swift in Sources */,
 				26E24CEA254DC3BE00151CB5 /* ButtonPublisher.swift in Sources */,
 				26E24CBA254DC28600151CB5 /* MusicPediaTests.swift in Sources */,
-				26E24D20254E5AAF00151CB5 /* SearchViewController.swift in Sources */,
+				26E24D20254E5AAF00151CB5 /* SearchView.swift in Sources */,
 				26E24D02254E15BA00151CB5 /* Album.swift in Sources */,
 				26E24D23254E5AE900151CB5 /* SearchViewModel.swift in Sources */,
 				26E24D0D254E1A2200151CB5 /* SearchResponse.swift in Sources */,

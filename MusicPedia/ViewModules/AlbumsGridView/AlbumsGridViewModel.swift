@@ -9,16 +9,37 @@ import UIKit
 
 class AlbumsGridViewModel {
 
+    // MARK: Properties
     private let repository: SearchRepositoryProtocol
     private var currentSearch: String = ""
+    
+    var onSearchRequestSuccesEvent: ((_ isFirstPage: Bool) -> Void)?
+    var onStateViewChangedEvent: ((_ state: ViewState) -> Void)?
     var isProcessing = false
     
     var albums: [Album] = [] {
         didSet {
-            // TODO
+            onSearchRequestSuccesEvent?(page == 1)
         }
     }
     
+    var page: Int = 1 {
+        didSet {
+            if page > 1 {
+                searchPhotos(isNextPage: true)
+            }
+        }
+    }
+    
+    var search: String = "" {
+        didSet { searchPhotos(isNextPage: false) }
+    }
+    
+    private var viewState: ViewState = .none {
+        didSet { onStateViewChangedEvent?(viewState) }
+    }
+    
+    // MARK: Init
     init(repository: SearchRepositoryProtocol) {
         self.repository = repository
     }
@@ -26,11 +47,29 @@ class AlbumsGridViewModel {
     // MARK: Repository APIs
     func submitSearch(isNextPage: Bool) {
         isProcessing = true
+        
+    }
+    
+    // MARK: Repository
+    private func searchPhotos(isNextPage: Bool) {
+        isProcessing = true
+        if page == 1 { viewState = .loading }
         repository.getTopAlbuns(search: "pink floyd", page: 1) { result in
             
             switch result {
-            case .success(let album):
-                print(album)
+            case .success(let albums):
+                
+                if albums.isEmpty {
+                    self.viewState = .empty
+                    return
+                }
+                
+                if isNextPage {
+                    self.albums.append(contentsOf: albums)
+                } else {
+                    self.page = 1
+                    self.albums = albums
+                }
             case .failure(let error):
                 print(error.errorDescription)
             }
@@ -38,4 +77,13 @@ class AlbumsGridViewModel {
         }
     }
     
+    private func updateViewStateWithResponse() {
+        viewState = .none
+    }
+    
+    func loadInitialState(){
+        viewState = .start
+    }
 }
+
+

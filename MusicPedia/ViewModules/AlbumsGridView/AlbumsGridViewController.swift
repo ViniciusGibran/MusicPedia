@@ -11,6 +11,7 @@ class AlbumsGridViewController: RootViewController {
     
     // MARK: UI Components
     let searchContainerView = UIView()
+    let headerView: HeaderView
     
     var collectionView: UICollectionView? {
         didSet {
@@ -22,8 +23,9 @@ class AlbumsGridViewController: RootViewController {
     // MARK: Properties
     let viewModel: AlbumsGridViewModel
     
-    init(viewModel: AlbumsGridViewModel) {
+    init(viewModel: AlbumsGridViewModel, headerView: HeaderView) {
         self.viewModel = viewModel
+        self.headerView = headerView
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -39,9 +41,5 @@ class AlbumsGridViewController: RootViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        viewModel.submitSearch(isNextPage: false)
-        
-        view.backgroundColor = .red
     }
 }

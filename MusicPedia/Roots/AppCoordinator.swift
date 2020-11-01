@@ -34,7 +34,8 @@ class AppCoordinator: Coordinator {
         let searchRepository = SearchRepository()
         let viewModel = AlbumsGridViewModel(repository: searchRepository)
         
-        let albumGridView = AlbumsGridViewController.init(viewModel: viewModel)
+        let headerView = HeaderView()
+        let albumGridView = AlbumsGridViewController.init(viewModel: viewModel, headerView: headerView)
         
         self.currentView = albumGridView
     }

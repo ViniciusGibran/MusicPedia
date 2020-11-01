@@ -47,6 +47,30 @@
 		26E24D10254E326F00151CB5 /* AlbumsGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D0E254E326F00151CB5 /* AlbumsGridViewController.swift */; };
 		26E24D13254E380F00151CB5 /* AlbumsGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D12254E380F00151CB5 /* AlbumsGridViewModel.swift */; };
 		26E24D14254E380F00151CB5 /* AlbumsGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D12254E380F00151CB5 /* AlbumsGridViewModel.swift */; };
+		26E24D16254E58A300151CB5 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D15254E58A300151CB5 /* HeaderView.swift */; };
+		26E24D17254E58A300151CB5 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D15254E58A300151CB5 /* HeaderView.swift */; };
+		26E24D19254E58D000151CB5 /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D18254E58D000151CB5 /* AlbumCell.swift */; };
+		26E24D1A254E58D000151CB5 /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D18254E58D000151CB5 /* AlbumCell.swift */; };
+		26E24D1F254E5AAF00151CB5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D1E254E5AAF00151CB5 /* SearchViewController.swift */; };
+		26E24D20254E5AAF00151CB5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D1E254E5AAF00151CB5 /* SearchViewController.swift */; };
+		26E24D22254E5AE900151CB5 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D21254E5AE900151CB5 /* SearchViewModel.swift */; };
+		26E24D23254E5AE900151CB5 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D21254E5AE900151CB5 /* SearchViewModel.swift */; };
+		26E24D28254E5C0700151CB5 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D24254E5C0700151CB5 /* TagView.swift */; };
+		26E24D29254E5C0700151CB5 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D24254E5C0700151CB5 /* TagView.swift */; };
+		26E24D2A254E5C0700151CB5 /* StateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D25254E5C0700151CB5 /* StateView.swift */; };
+		26E24D2B254E5C0700151CB5 /* StateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D25254E5C0700151CB5 /* StateView.swift */; };
+		26E24D2C254E5C0700151CB5 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D26254E5C0700151CB5 /* ToastView.swift */; };
+		26E24D2D254E5C0700151CB5 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D26254E5C0700151CB5 /* ToastView.swift */; };
+		26E24D2E254E5C0700151CB5 /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D27254E5C0700151CB5 /* TagCell.swift */; };
+		26E24D2F254E5C0700151CB5 /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D27254E5C0700151CB5 /* TagCell.swift */; };
+		26E24D34254E5C8A00151CB5 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D30254E5C8A00151CB5 /* LoadingView.swift */; };
+		26E24D35254E5C8A00151CB5 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D30254E5C8A00151CB5 /* LoadingView.swift */; };
+		26E24D36254E5C8A00151CB5 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D31254E5C8A00151CB5 /* ErrorView.swift */; };
+		26E24D37254E5C8A00151CB5 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D31254E5C8A00151CB5 /* ErrorView.swift */; };
+		26E24D38254E5C8A00151CB5 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D32254E5C8A00151CB5 /* StartView.swift */; };
+		26E24D39254E5C8A00151CB5 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D32254E5C8A00151CB5 /* StartView.swift */; };
+		26E24D3A254E5C8A00151CB5 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D33254E5C8A00151CB5 /* EmptyView.swift */; };
+		26E24D3B254E5C8A00151CB5 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D33254E5C8A00151CB5 /* EmptyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +112,18 @@
 		26E24D0B254E1A2200151CB5 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		26E24D0E254E326F00151CB5 /* AlbumsGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsGridViewController.swift; sourceTree = "<group>"; };
 		26E24D12254E380F00151CB5 /* AlbumsGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsGridViewModel.swift; sourceTree = "<group>"; };
+		26E24D15254E58A300151CB5 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		26E24D18254E58D000151CB5 /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
+		26E24D1E254E5AAF00151CB5 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		26E24D21254E5AE900151CB5 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		26E24D24254E5C0700151CB5 /* TagView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+		26E24D25254E5C0700151CB5 /* StateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateView.swift; sourceTree = "<group>"; };
+		26E24D26254E5C0700151CB5 /* ToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		26E24D27254E5C0700151CB5 /* TagCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
+		26E24D30254E5C8A00151CB5 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		26E24D31254E5C8A00151CB5 /* ErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		26E24D32254E5C8A00151CB5 /* StartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		26E24D33254E5C8A00151CB5 /* EmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +230,7 @@
 		26E24CD5254DC38400151CB5 /* ViewModules */ = {
 			isa = PBXGroup;
 			children = (
+				26E24D1B254E5A3F00151CB5 /* SearchView */,
 				26E24CFD254DC78400151CB5 /* AlbumsGridView */,
 			);
 			path = ViewModules;
@@ -232,8 +269,8 @@
 			isa = PBXGroup;
 			children = (
 				26E24D11254E37EC00151CB5 /* Subviews */,
-				26E24D0E254E326F00151CB5 /* AlbumsGridViewController.swift */,
 				26E24D12254E380F00151CB5 /* AlbumsGridViewModel.swift */,
+				26E24D0E254E326F00151CB5 /* AlbumsGridViewController.swift */,
 			);
 			path = AlbumsGridView;
 			sourceTree = "<group>";
@@ -274,8 +311,43 @@
 		26E24D11254E37EC00151CB5 /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
+				26E24D15254E58A300151CB5 /* HeaderView.swift */,
+				26E24D18254E58D000151CB5 /* AlbumCell.swift */,
 			);
 			path = Subviews;
+			sourceTree = "<group>";
+		};
+		26E24D1B254E5A3F00151CB5 /* SearchView */ = {
+			isa = PBXGroup;
+			children = (
+				26E24D1D254E5A6500151CB5 /* StateView */,
+				26E24D1C254E5A5800151CB5 /* Subviews */,
+				26E24D1E254E5AAF00151CB5 /* SearchViewController.swift */,
+				26E24D21254E5AE900151CB5 /* SearchViewModel.swift */,
+			);
+			path = SearchView;
+			sourceTree = "<group>";
+		};
+		26E24D1C254E5A5800151CB5 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				26E24D24254E5C0700151CB5 /* TagView.swift */,
+				26E24D25254E5C0700151CB5 /* StateView.swift */,
+				26E24D27254E5C0700151CB5 /* TagCell.swift */,
+				26E24D26254E5C0700151CB5 /* ToastView.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		26E24D1D254E5A6500151CB5 /* StateView */ = {
+			isa = PBXGroup;
+			children = (
+				26E24D33254E5C8A00151CB5 /* EmptyView.swift */,
+				26E24D31254E5C8A00151CB5 /* ErrorView.swift */,
+				26E24D30254E5C8A00151CB5 /* LoadingView.swift */,
+				26E24D32254E5C8A00151CB5 /* StartView.swift */,
+			);
+			path = StateView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,7 +451,12 @@
 			files = (
 				26E24CF7254DC43E00151CB5 /* AppCoordinator.swift in Sources */,
 				26E24CF5254DC43E00151CB5 /* AppSession.swift in Sources */,
+				26E24D2A254E5C0700151CB5 /* StateView.swift in Sources */,
 				26E24D0F254E326F00151CB5 /* AlbumsGridViewController.swift in Sources */,
+				26E24D28254E5C0700151CB5 /* TagView.swift in Sources */,
+				26E24D36254E5C8A00151CB5 /* ErrorView.swift in Sources */,
+				26E24D34254E5C8A00151CB5 /* LoadingView.swift in Sources */,
+				26E24D2E254E5C0700151CB5 /* TagCell.swift in Sources */,
 				26E24CE2254DC39C00151CB5 /* String+Utils.swift in Sources */,
 				26E24D04254E191900151CB5 /* Artist.swift in Sources */,
 				26E24CA1254DC28500151CB5 /* AppDelegate.swift in Sources */,
@@ -389,11 +466,18 @@
 				26E24CF9254DC43E00151CB5 /* RootNavigationController.swift in Sources */,
 				26E24CE0254DC39C00151CB5 /* UITextFIeld+Utils.swift in Sources */,
 				26E24CE9254DC3BE00151CB5 /* ButtonPublisher.swift in Sources */,
+				26E24D1F254E5AAF00151CB5 /* SearchViewController.swift in Sources */,
 				26E24D01254E15BA00151CB5 /* Album.swift in Sources */,
+				26E24D22254E5AE900151CB5 /* SearchViewModel.swift in Sources */,
 				26E24D0C254E1A2200151CB5 /* SearchResponse.swift in Sources */,
+				26E24D38254E5C8A00151CB5 /* StartView.swift in Sources */,
 				26E24CDC254DC39C00151CB5 /* UIView+Constraints.swift in Sources */,
+				26E24D16254E58A300151CB5 /* HeaderView.swift in Sources */,
+				26E24D2C254E5C0700151CB5 /* ToastView.swift in Sources */,
 				26E24CDE254DC39C00151CB5 /* UIColor+Utils.swift in Sources */,
+				26E24D19254E58D000151CB5 /* AlbumCell.swift in Sources */,
 				26E24CE4254DC39C00151CB5 /* WaterfallGridLayout.swift in Sources */,
+				26E24D3A254E5C8A00151CB5 /* EmptyView.swift in Sources */,
 				26E24D13254E380F00151CB5 /* AlbumsGridViewModel.swift in Sources */,
 				26E24CEF254DC40A00151CB5 /* APIRequest.swift in Sources */,
 			);
@@ -405,7 +489,12 @@
 			files = (
 				26E24CF8254DC43E00151CB5 /* AppCoordinator.swift in Sources */,
 				26E24CF6254DC43E00151CB5 /* AppSession.swift in Sources */,
+				26E24D2B254E5C0700151CB5 /* StateView.swift in Sources */,
 				26E24D10254E326F00151CB5 /* AlbumsGridViewController.swift in Sources */,
+				26E24D29254E5C0700151CB5 /* TagView.swift in Sources */,
+				26E24D37254E5C8A00151CB5 /* ErrorView.swift in Sources */,
+				26E24D35254E5C8A00151CB5 /* LoadingView.swift in Sources */,
+				26E24D2F254E5C0700151CB5 /* TagCell.swift in Sources */,
 				26E24CE3254DC39C00151CB5 /* String+Utils.swift in Sources */,
 				26E24D05254E191900151CB5 /* Artist.swift in Sources */,
 				26E24CDF254DC39C00151CB5 /* UIColor+Utils.swift in Sources */,
@@ -415,11 +504,18 @@
 				26E24CFA254DC43E00151CB5 /* RootNavigationController.swift in Sources */,
 				26E24CEA254DC3BE00151CB5 /* ButtonPublisher.swift in Sources */,
 				26E24CBA254DC28600151CB5 /* MusicPediaTests.swift in Sources */,
+				26E24D20254E5AAF00151CB5 /* SearchViewController.swift in Sources */,
 				26E24D02254E15BA00151CB5 /* Album.swift in Sources */,
+				26E24D23254E5AE900151CB5 /* SearchViewModel.swift in Sources */,
 				26E24D0D254E1A2200151CB5 /* SearchResponse.swift in Sources */,
+				26E24D39254E5C8A00151CB5 /* StartView.swift in Sources */,
 				26E24CEC254DC3BE00151CB5 /* TextFieldPubisher.swift in Sources */,
+				26E24D17254E58A300151CB5 /* HeaderView.swift in Sources */,
+				26E24D2D254E5C0700151CB5 /* ToastView.swift in Sources */,
 				26E24CE5254DC39C00151CB5 /* WaterfallGridLayout.swift in Sources */,
+				26E24D1A254E58D000151CB5 /* AlbumCell.swift in Sources */,
 				26E24CF0254DC40A00151CB5 /* APIRequest.swift in Sources */,
+				26E24D3B254E5C8A00151CB5 /* EmptyView.swift in Sources */,
 				26E24D14254E380F00151CB5 /* AlbumsGridViewModel.swift in Sources */,
 				26E24CDD254DC39C00151CB5 /* UIView+Constraints.swift in Sources */,
 			);

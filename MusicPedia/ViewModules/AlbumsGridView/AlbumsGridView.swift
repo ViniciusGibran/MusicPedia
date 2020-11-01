@@ -25,6 +25,7 @@ class AlbumsGridView: RootViewController {
         }
     }
     
+    // MARK: Init
     init(viewModel: AlbumsGridViewModel, searchView: SearchView, headerView: HeaderView) {
         self.viewModel  = viewModel
         self.searchView = searchView
@@ -45,7 +46,6 @@ class AlbumsGridView: RootViewController {
     override func loadView() {
         super.loadView()
         
-        //TODO: organize this
         let backgroundImageView = UIImageView(image: UIImage(named: "cloud-bg")!)
         backgroundImageView.contentMode = .scaleAspectFill
         view.addSubview(backgroundImageView)
@@ -67,7 +67,6 @@ class AlbumsGridView: RootViewController {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: waterfallLayout)
         collectionView.showsVerticalScrollIndicator = false
         
-        // review
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 5, bottom: 10, right: 5)
         view.addSubview(collectionView)
         collectionView.pinEdgesToSuperview()
@@ -104,28 +103,18 @@ class AlbumsGridView: RootViewController {
         self.viewModel.loadInitialState()
     }
     
-    private func makeSearch(content: String) {
-        self.view.endEditing(true)
-        self.headerView.setTextFieldPlaceholder(content)
-        self.viewModel.search = content
-        
-        self.headerView.expand()
-        self.headerView.isUserInteractionEnabled = false
-        self.searchContainerView.isHidden = true
-    }
-    
     private func bindEvents() {
-        // searchView
-        searchView.onTagSelectedEvent = { content in
-            self.headerView.setTextFieldPlaceholder(content)
-            self.makeSearch(content: content)
-        }
-        
         // viewModel
         viewModel.onSearchRequestSuccesEvent = { isFirstPage in
             DispatchQueue.main.async {
                 self.updateView(isFirstPage)
             }
+        }
+        
+        // searchView
+        searchView.onTagSelectedEvent = { content in
+            self.headerView.setTextFieldPlaceholder(content)
+            self.makeSearch(content: content)
         }
         
         // stateView
@@ -135,6 +124,16 @@ class AlbumsGridView: RootViewController {
                 self.stateView.updateState(state)
             }
         }
+    }
+    
+    private func makeSearch(content: String) {
+        self.view.endEditing(true)
+        self.headerView.setTextFieldPlaceholder(content)
+        self.viewModel.search = content
+        
+        self.headerView.expand()
+        self.headerView.isUserInteractionEnabled = false
+        self.searchContainerView.isHidden = true
     }
     
     func updateView(_ isFirstPage: Bool) {

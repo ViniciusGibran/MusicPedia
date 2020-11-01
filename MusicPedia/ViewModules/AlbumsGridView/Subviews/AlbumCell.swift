@@ -78,7 +78,7 @@ class AlbumCell: UICollectionViewCell {
                 titleLabel.text = album.name
                 titleLabel.superview?.isHidden = album.name == ""
                 
-                if let url = URL(string: album.imageURL?.extraLarge ?? "") {
+                if let url = URL(string: album.imageURL?.large ?? "") {
                     coverImageView.kf.setImage(with: url)
                 }
             }

@@ -34,6 +34,7 @@ class SearchView: RootViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: Lifecycle
     override func loadView() {
         super.loadView()
         
@@ -44,7 +45,7 @@ class SearchView: RootViewController {
         hotTagsLabel.font = .systemFont(ofSize: 20, weight: .medium)
         hotTagsLabel.textColor = .white
         hotTagsLabel.textAlignment = .left
-        hotTagsLabel.text = "Hot Tags!"
+        hotTagsLabel.text = "Top Tags!"
         
         view.addSubview(hotTagsLabel)
         hotTagsLabel.pinLeft(20)
@@ -61,11 +62,22 @@ class SearchView: RootViewController {
         
         let height = UIScreen.main.bounds.height / 2 - 35
         hotTagView.constraintHeight(height)
-        
     }
     
-    private func updateView(completion: @escaping (() -> Void)) {
-        // TODO: fetch tags
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.bindEvents()
+    }
+    
+    private func bindEvents() {
+        
+        // viewModel
+        viewModel.onGetTopTagsSuccesEvent = { tagItems in
+            self.hotTagView.tagItems = tagItems
+            self.showAnimated()
+        }
+        
+        viewModel.getTopTags()
     }
 }
 
@@ -79,19 +91,16 @@ extension SearchView: CloudTagViewDelegate {
 // MARK: - Animations
 extension SearchView {
     func showAnimated() {
-        
-        self.activityIndicator.isHidden = false
-        self.hotTagView.alpha = 0.0
-        self.view.layoutIfNeeded()
-        
-        self.updateView {
-            DispatchQueue.main.async {
-                UIView.animate(withDuration: 0.3, delay: 0.1, options: .curveEaseOut, animations: {
-                    self.activityIndicator.isHidden = true
-                    self.hotTagView.alpha = 1.0
-                    self.view.layoutIfNeeded()
-                }, completion: nil)
-            }
+        DispatchQueue.main.async {
+            self.activityIndicator.isHidden = false
+            self.hotTagView.alpha = 0.0
+            self.view.layoutIfNeeded()
+            
+            UIView.animate(withDuration: 0.3, delay: 0.1, options: .curveEaseOut, animations: {
+                self.activityIndicator.isHidden = true
+                self.hotTagView.alpha = 1.0
+                self.view.layoutIfNeeded()
+            }, completion: nil)
         }
     }
 }

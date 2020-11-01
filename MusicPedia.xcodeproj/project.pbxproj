@@ -76,6 +76,12 @@
 		26E24D41254EFC3700151CB5 /* AlbumDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D40254EFC3700151CB5 /* AlbumDetailViewModel.swift */; };
 		26E24D42254EFC3700151CB5 /* AlbumDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D40254EFC3700151CB5 /* AlbumDetailViewModel.swift */; };
 		26E24D4B254F065C00151CB5 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 26E24D4A254F065C00151CB5 /* Kingfisher */; };
+		26E24D4E254F39D800151CB5 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D4D254F39D800151CB5 /* Tag.swift */; };
+		26E24D4F254F39D800151CB5 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D4D254F39D800151CB5 /* Tag.swift */; };
+		26E24D52254F434A00151CB5 /* ArtistRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D51254F434A00151CB5 /* ArtistRepository.swift */; };
+		26E24D53254F434A00151CB5 /* ArtistRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D51254F434A00151CB5 /* ArtistRepository.swift */; };
+		26E24D55254F436700151CB5 /* ArtistResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D54254F436700151CB5 /* ArtistResponse.swift */; };
+		26E24D56254F436700151CB5 /* ArtistResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D54254F436700151CB5 /* ArtistResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +137,9 @@
 		26E24D33254E5C8A00151CB5 /* EmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		26E24D3D254EF52600151CB5 /* AlbumDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailView.swift; sourceTree = "<group>"; };
 		26E24D40254EFC3700151CB5 /* AlbumDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailViewModel.swift; sourceTree = "<group>"; };
+		26E24D4D254F39D800151CB5 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		26E24D51254F434A00151CB5 /* ArtistRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistRepository.swift; sourceTree = "<group>"; };
+		26E24D54254F436700151CB5 /* ArtistResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,10 +237,11 @@
 		26E24CD4254DC37E00151CB5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				26E24CED254DC3F800151CB5 /* APIRequest */,
+				26E24D4C254F39C100151CB5 /* Tag */,
 				26E24CFF254E15A700151CB5 /* Artist */,
 				26E24CFE254E154100151CB5 /* Album */,
-				26E24CED254DC3F800151CB5 /* APIRequest */,
-				26E24D06254E19C000151CB5 /* Repositories */,
+				26E24D07254E19EB00151CB5 /* Search */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -297,16 +307,10 @@
 			isa = PBXGroup;
 			children = (
 				26E24D03254E191900151CB5 /* Artist.swift */,
+				26E24D51254F434A00151CB5 /* ArtistRepository.swift */,
+				26E24D54254F436700151CB5 /* ArtistResponse.swift */,
 			);
 			path = Artist;
-			sourceTree = "<group>";
-		};
-		26E24D06254E19C000151CB5 /* Repositories */ = {
-			isa = PBXGroup;
-			children = (
-				26E24D07254E19EB00151CB5 /* Search */,
-			);
-			path = Repositories;
 			sourceTree = "<group>";
 		};
 		26E24D07254E19EB00151CB5 /* Search */ = {
@@ -374,6 +378,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		26E24D4C254F39C100151CB5 /* Tag */ = {
+			isa = PBXGroup;
+			children = (
+				26E24D4D254F39D800151CB5 /* Tag.swift */,
+			);
+			path = Tag;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -481,9 +493,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26E24D4E254F39D800151CB5 /* Tag.swift in Sources */,
 				26E24CF7254DC43E00151CB5 /* AppCoordinator.swift in Sources */,
 				26E24CF5254DC43E00151CB5 /* AppSession.swift in Sources */,
 				26E24D2A254E5C0700151CB5 /* StateView.swift in Sources */,
+				26E24D52254F434A00151CB5 /* ArtistRepository.swift in Sources */,
 				26E24D0F254E326F00151CB5 /* AlbumsGridView.swift in Sources */,
 				26E24D28254E5C0700151CB5 /* TagView.swift in Sources */,
 				26E24D36254E5C8A00151CB5 /* ErrorView.swift in Sources */,
@@ -496,6 +510,7 @@
 				26E24CEB254DC3BE00151CB5 /* TextFieldPubisher.swift in Sources */,
 				26E24D09254E1A0600151CB5 /* SearchRepository.swift in Sources */,
 				26E24CF9254DC43E00151CB5 /* RootNavigationController.swift in Sources */,
+				26E24D55254F436700151CB5 /* ArtistResponse.swift in Sources */,
 				26E24CE0254DC39C00151CB5 /* UITextFIeld+Utils.swift in Sources */,
 				26E24CE9254DC3BE00151CB5 /* ButtonPublisher.swift in Sources */,
 				26E24D1F254E5AAF00151CB5 /* SearchView.swift in Sources */,
@@ -521,9 +536,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26E24D4F254F39D800151CB5 /* Tag.swift in Sources */,
 				26E24CF8254DC43E00151CB5 /* AppCoordinator.swift in Sources */,
 				26E24CF6254DC43E00151CB5 /* AppSession.swift in Sources */,
 				26E24D2B254E5C0700151CB5 /* StateView.swift in Sources */,
+				26E24D53254F434A00151CB5 /* ArtistRepository.swift in Sources */,
 				26E24D10254E326F00151CB5 /* AlbumsGridView.swift in Sources */,
 				26E24D29254E5C0700151CB5 /* TagView.swift in Sources */,
 				26E24D37254E5C8A00151CB5 /* ErrorView.swift in Sources */,
@@ -536,6 +553,7 @@
 				26E24CE1254DC39C00151CB5 /* UITextFIeld+Utils.swift in Sources */,
 				26E24D0A254E1A0600151CB5 /* SearchRepository.swift in Sources */,
 				26E24CFA254DC43E00151CB5 /* RootNavigationController.swift in Sources */,
+				26E24D56254F436700151CB5 /* ArtistResponse.swift in Sources */,
 				26E24CEA254DC3BE00151CB5 /* ButtonPublisher.swift in Sources */,
 				26E24CBA254DC28600151CB5 /* MusicPediaTests.swift in Sources */,
 				26E24D20254E5AAF00151CB5 /* SearchView.swift in Sources */,

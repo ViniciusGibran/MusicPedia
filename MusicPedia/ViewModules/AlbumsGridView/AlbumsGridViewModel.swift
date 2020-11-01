@@ -47,14 +47,13 @@ class AlbumsGridViewModel {
     // MARK: Repository APIs
     func submitSearch(isNextPage: Bool) {
         isProcessing = true
-        
     }
     
     // MARK: Repository
     private func searchPhotos(isNextPage: Bool) {
         isProcessing = true
         if page == 1 { viewState = .loading }
-        repository.getTopAlbuns(search: "pink floyd", page: 1) { result in
+        repository.getTopAlbuns(search: search, page: page) { result in
             
             switch result {
             case .success(let albums):
@@ -70,10 +69,12 @@ class AlbumsGridViewModel {
                     self.page = 1
                     self.albums = albums
                 }
+                
+                self.viewState =  .none
+                
             case .failure(let error):
-                print(error.errorDescription)
+                self.viewState = isNextPage ? .errorWithContent(error) : .error(error)
             }
-            
         }
     }
     

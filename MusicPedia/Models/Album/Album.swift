@@ -26,6 +26,7 @@ struct Album: Decodable {
         case playerURL = "url"
         case images = "image"
         case name
+        case artist
     }
     
     struct Image: Decodable {

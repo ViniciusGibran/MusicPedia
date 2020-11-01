@@ -7,6 +7,6 @@
 
 import UIKit
 
-class RootViewController: NSObject {
+class RootViewController: UIViewController {
 
 }

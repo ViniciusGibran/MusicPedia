@@ -10,9 +10,19 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
+    var rootNavigation: RootNavigationController?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let mainWindow = UIWindow(frame: UIScreen.main.bounds)
+        let coordinator = AppCoordinator(window: mainWindow)
+        rootNavigation = RootNavigationController(coordinator: coordinator)
+        
+        rootNavigation?.showAlbumsGridView()
+        self.window = mainWindow
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
 }

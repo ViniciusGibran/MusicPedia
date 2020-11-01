@@ -6,11 +6,21 @@
 //
 
 struct Album: Decodable {
+    typealias SizeType = (large: String?, extraLarge: String?)
+    
     var name: String?
     var playerURL: String?
     var artist: Artist?
     var images: [Image]
-    var imageURL: ImageURL?
+    
+    // TODO: improve this
+    var imageURL: SizeType? {
+        get {
+            let images = self.images.filter{ $0.size == "large" && $0.size == "extralarge" }
+            let sizes: SizeType = (large: images.first?.url, extraLarge: images.last?.url)
+            return sizes
+        }
+    }
     
     enum CodingKeys: String, CodingKey {
         case playerURL = "url"
@@ -24,10 +34,5 @@ struct Album: Decodable {
         enum CodingKeys: String, CodingKey {
             case url = "#text"
         }
-    }
-    
-    struct ImageURL {
-        let large: String
-        let extraLarge: String
     }
 }

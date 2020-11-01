@@ -7,6 +7,21 @@
 
 import UIKit
 
-class RootNavigationController: NSObject {
+class RootNavigationController: UINavigationController {
 
+    let coordinator: AppCoordinator
+    
+    init(coordinator: AppCoordinator) {
+        self.coordinator = coordinator
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func showAlbumsGridView() {
+        coordinator.showAlbumsGridView()
+    }
+    
 }

@@ -9,11 +9,15 @@
 class SearchResponse: Decodable {
     let metadata: Metadata
     
+    enum CodingKeys: String, CodingKey {
+        case metadata = "topalbums"
+    }
+    
     struct Metadata: Decodable {
         var albums: [Album]
         
         enum CodingKeys: String, CodingKey {
-            case albums = "topalbums"
+            case albums = "album"
         }
     }
 }

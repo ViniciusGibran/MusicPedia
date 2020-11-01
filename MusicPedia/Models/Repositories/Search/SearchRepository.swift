@@ -8,12 +8,12 @@
 import UIKit
 
 protocol SearchRepositoryProtocol {
-    func getTopAlbuns(search: String, page: Int, completion: @escaping (ResponseResult<[Album], APIError>) -> Album)
+    func getTopAlbuns(search: String, page: Int, completion: @escaping (ResponseResult<[Album], APIError>) -> Void)
 }
 
 class SearchRepository: APIRequest, SearchRepositoryProtocol {
         
-    func getTopAlbuns(search: String, page: Int, completion: @escaping (ResponseResult<[Album], APIError>) -> Album) {
+    func getTopAlbuns(search: String, page: Int, completion: @escaping (ResponseResult<[Album], APIError>) -> Void) {
         
         let encondedSearch = search.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) ?? ""
         
@@ -22,17 +22,17 @@ class SearchRepository: APIRequest, SearchRepositoryProtocol {
         
         fetchDataFrom(url: url)
             .sink(receiveCompletion: { response in
-//                if case let .failure(error) = response {
-////                    completion(.failure(error))
-//                }
+                if case let .failure(error) = response {
+                    completion(.failure(error))
+                }
             }, receiveValue: { data in
                 do {
                     
                     let response = try self.decoder.decode(SearchResponse.self, from: data)
                     if !response.metadata.albums.isEmpty {
-//
+                        completion(.success(response.metadata.albums))
                     } else {
-//                        completion(.success([]))
+                        completion(.failure(APIError(.unknown)))
                     }
                 } catch {
                     print(error.localizedDescription)

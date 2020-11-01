@@ -1,9 +1,8 @@
 //
 //  UIView+Constraints.swift
-//  PhotogramMinderaTest
+//  MusicPedia
 //
 //  Created by Vinicius Gibran on 10/10/2020.
-//  Copyright © 2020 Mindera test. All rights reserved.
 //
 
 import UIKit

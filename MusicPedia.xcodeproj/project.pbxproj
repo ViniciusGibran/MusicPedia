@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -43,8 +43,8 @@
 		26E24D0A254E1A0600151CB5 /* SearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D08254E1A0600151CB5 /* SearchRepository.swift */; };
 		26E24D0C254E1A2200151CB5 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D0B254E1A2200151CB5 /* SearchResponse.swift */; };
 		26E24D0D254E1A2200151CB5 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D0B254E1A2200151CB5 /* SearchResponse.swift */; };
-		26E24D0F254E326F00151CB5 /* AlbumsGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D0E254E326F00151CB5 /* AlbumsGridViewController.swift */; };
-		26E24D10254E326F00151CB5 /* AlbumsGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D0E254E326F00151CB5 /* AlbumsGridViewController.swift */; };
+		26E24D0F254E326F00151CB5 /* AlbumsGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D0E254E326F00151CB5 /* AlbumsGridView.swift */; };
+		26E24D10254E326F00151CB5 /* AlbumsGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D0E254E326F00151CB5 /* AlbumsGridView.swift */; };
 		26E24D13254E380F00151CB5 /* AlbumsGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D12254E380F00151CB5 /* AlbumsGridViewModel.swift */; };
 		26E24D14254E380F00151CB5 /* AlbumsGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D12254E380F00151CB5 /* AlbumsGridViewModel.swift */; };
 		26E24D16254E58A300151CB5 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D15254E58A300151CB5 /* HeaderView.swift */; };
@@ -71,6 +71,11 @@
 		26E24D39254E5C8A00151CB5 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D32254E5C8A00151CB5 /* StartView.swift */; };
 		26E24D3A254E5C8A00151CB5 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D33254E5C8A00151CB5 /* EmptyView.swift */; };
 		26E24D3B254E5C8A00151CB5 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D33254E5C8A00151CB5 /* EmptyView.swift */; };
+		26E24D3E254EF52600151CB5 /* AlbumDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D3D254EF52600151CB5 /* AlbumDetailView.swift */; };
+		26E24D3F254EF52600151CB5 /* AlbumDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D3D254EF52600151CB5 /* AlbumDetailView.swift */; };
+		26E24D41254EFC3700151CB5 /* AlbumDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D40254EFC3700151CB5 /* AlbumDetailViewModel.swift */; };
+		26E24D42254EFC3700151CB5 /* AlbumDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24D40254EFC3700151CB5 /* AlbumDetailViewModel.swift */; };
+		26E24D4B254F065C00151CB5 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 26E24D4A254F065C00151CB5 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,7 +115,7 @@
 		26E24D03254E191900151CB5 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		26E24D08254E1A0600151CB5 /* SearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepository.swift; sourceTree = "<group>"; };
 		26E24D0B254E1A2200151CB5 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
-		26E24D0E254E326F00151CB5 /* AlbumsGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsGridViewController.swift; sourceTree = "<group>"; };
+		26E24D0E254E326F00151CB5 /* AlbumsGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsGridView.swift; sourceTree = "<group>"; };
 		26E24D12254E380F00151CB5 /* AlbumsGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsGridViewModel.swift; sourceTree = "<group>"; };
 		26E24D15254E58A300151CB5 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		26E24D18254E58D000151CB5 /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
@@ -124,6 +129,8 @@
 		26E24D31254E5C8A00151CB5 /* ErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		26E24D32254E5C8A00151CB5 /* StartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		26E24D33254E5C8A00151CB5 /* EmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		26E24D3D254EF52600151CB5 /* AlbumDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailView.swift; sourceTree = "<group>"; };
+		26E24D40254EFC3700151CB5 /* AlbumDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26E24D4B254F065C00151CB5 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +159,7 @@
 				26E24CB8254DC28600151CB5 /* MusicPediaTests */,
 				26E24CC3254DC28600151CB5 /* MusicPediaUITests */,
 				26E24C9E254DC28500151CB5 /* Products */,
+				26E24D43254F034A00151CB5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -230,7 +239,7 @@
 		26E24CD5254DC38400151CB5 /* ViewModules */ = {
 			isa = PBXGroup;
 			children = (
-				26E24D1B254E5A3F00151CB5 /* SearchView */,
+				26E24D3C254EF50B00151CB5 /* AlbumDetailView */,
 				26E24CFD254DC78400151CB5 /* AlbumsGridView */,
 			);
 			path = ViewModules;
@@ -268,9 +277,10 @@
 		26E24CFD254DC78400151CB5 /* AlbumsGridView */ = {
 			isa = PBXGroup;
 			children = (
+				26E24D1B254E5A3F00151CB5 /* SearchView */,
 				26E24D11254E37EC00151CB5 /* Subviews */,
+				26E24D0E254E326F00151CB5 /* AlbumsGridView.swift */,
 				26E24D12254E380F00151CB5 /* AlbumsGridViewModel.swift */,
-				26E24D0E254E326F00151CB5 /* AlbumsGridViewController.swift */,
 			);
 			path = AlbumsGridView;
 			sourceTree = "<group>";
@@ -350,6 +360,22 @@
 			path = StateView;
 			sourceTree = "<group>";
 		};
+		26E24D3C254EF50B00151CB5 /* AlbumDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				26E24D3D254EF52600151CB5 /* AlbumDetailView.swift */,
+				26E24D40254EFC3700151CB5 /* AlbumDetailViewModel.swift */,
+			);
+			path = AlbumDetailView;
+			sourceTree = "<group>";
+		};
+		26E24D43254F034A00151CB5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -366,6 +392,9 @@
 			dependencies = (
 			);
 			name = MusicPedia;
+			packageProductDependencies = (
+				26E24D4A254F065C00151CB5 /* Kingfisher */,
+			);
 			productName = MusicPedia;
 			productReference = 26E24C9D254DC28500151CB5 /* MusicPedia.app */;
 			productType = "com.apple.product-type.application";
@@ -415,6 +444,9 @@
 				Base,
 			);
 			mainGroup = 26E24C94254DC28500151CB5;
+			packageReferences = (
+				26E24D49254F065C00151CB5 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 26E24C9E254DC28500151CB5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -452,7 +484,7 @@
 				26E24CF7254DC43E00151CB5 /* AppCoordinator.swift in Sources */,
 				26E24CF5254DC43E00151CB5 /* AppSession.swift in Sources */,
 				26E24D2A254E5C0700151CB5 /* StateView.swift in Sources */,
-				26E24D0F254E326F00151CB5 /* AlbumsGridViewController.swift in Sources */,
+				26E24D0F254E326F00151CB5 /* AlbumsGridView.swift in Sources */,
 				26E24D28254E5C0700151CB5 /* TagView.swift in Sources */,
 				26E24D36254E5C8A00151CB5 /* ErrorView.swift in Sources */,
 				26E24D34254E5C8A00151CB5 /* LoadingView.swift in Sources */,
@@ -469,6 +501,7 @@
 				26E24D1F254E5AAF00151CB5 /* SearchView.swift in Sources */,
 				26E24D01254E15BA00151CB5 /* Album.swift in Sources */,
 				26E24D22254E5AE900151CB5 /* SearchViewModel.swift in Sources */,
+				26E24D41254EFC3700151CB5 /* AlbumDetailViewModel.swift in Sources */,
 				26E24D0C254E1A2200151CB5 /* SearchResponse.swift in Sources */,
 				26E24D38254E5C8A00151CB5 /* StartView.swift in Sources */,
 				26E24CDC254DC39C00151CB5 /* UIView+Constraints.swift in Sources */,
@@ -478,6 +511,7 @@
 				26E24D19254E58D000151CB5 /* AlbumCell.swift in Sources */,
 				26E24CE4254DC39C00151CB5 /* WaterfallGridLayout.swift in Sources */,
 				26E24D3A254E5C8A00151CB5 /* EmptyView.swift in Sources */,
+				26E24D3E254EF52600151CB5 /* AlbumDetailView.swift in Sources */,
 				26E24D13254E380F00151CB5 /* AlbumsGridViewModel.swift in Sources */,
 				26E24CEF254DC40A00151CB5 /* APIRequest.swift in Sources */,
 			);
@@ -490,7 +524,7 @@
 				26E24CF8254DC43E00151CB5 /* AppCoordinator.swift in Sources */,
 				26E24CF6254DC43E00151CB5 /* AppSession.swift in Sources */,
 				26E24D2B254E5C0700151CB5 /* StateView.swift in Sources */,
-				26E24D10254E326F00151CB5 /* AlbumsGridViewController.swift in Sources */,
+				26E24D10254E326F00151CB5 /* AlbumsGridView.swift in Sources */,
 				26E24D29254E5C0700151CB5 /* TagView.swift in Sources */,
 				26E24D37254E5C8A00151CB5 /* ErrorView.swift in Sources */,
 				26E24D35254E5C8A00151CB5 /* LoadingView.swift in Sources */,
@@ -507,6 +541,7 @@
 				26E24D20254E5AAF00151CB5 /* SearchView.swift in Sources */,
 				26E24D02254E15BA00151CB5 /* Album.swift in Sources */,
 				26E24D23254E5AE900151CB5 /* SearchViewModel.swift in Sources */,
+				26E24D42254EFC3700151CB5 /* AlbumDetailViewModel.swift in Sources */,
 				26E24D0D254E1A2200151CB5 /* SearchResponse.swift in Sources */,
 				26E24D39254E5C8A00151CB5 /* StartView.swift in Sources */,
 				26E24CEC254DC3BE00151CB5 /* TextFieldPubisher.swift in Sources */,
@@ -516,6 +551,7 @@
 				26E24D1A254E58D000151CB5 /* AlbumCell.swift in Sources */,
 				26E24CF0254DC40A00151CB5 /* APIRequest.swift in Sources */,
 				26E24D3B254E5C8A00151CB5 /* EmptyView.swift in Sources */,
+				26E24D3F254EF52600151CB5 /* AlbumDetailView.swift in Sources */,
 				26E24D14254E380F00151CB5 /* AlbumsGridViewModel.swift in Sources */,
 				26E24CDD254DC39C00151CB5 /* UIView+Constraints.swift in Sources */,
 			);
@@ -664,8 +700,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TCUWJ83M7D;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = MusicPedia/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -683,8 +721,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TCUWJ83M7D;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = MusicPedia/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -772,6 +812,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		26E24D49254F065C00151CB5 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		26E24D4A254F065C00151CB5 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 26E24D49254F065C00151CB5 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 26E24C95254DC28500151CB5 /* Project object */;
 }

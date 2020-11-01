@@ -24,4 +24,8 @@ class RootNavigationController: UINavigationController {
         coordinator.showAlbumsGridView()
     }
     
+    func showAlbumView(album: Album) {
+        coordinator.showAlbumView(album: album)
+    }
+    
 }

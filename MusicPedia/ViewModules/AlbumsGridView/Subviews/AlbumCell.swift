@@ -6,12 +6,13 @@
 //
 
 import UIKit
+import Kingfisher
 
 class AlbumCell: UICollectionViewCell {
     
     // MARK: UI Components
     let containerView = UIView()
-    let photoImageView = UIImageView()
+    let coverImageView = UIImageView()
     let placeholderImageView = UIImageView()
     let titleLabel = UILabel()
     
@@ -39,9 +40,9 @@ class AlbumCell: UICollectionViewCell {
         self.placeholderImageView.constraintWidth(30)
 
         // photo
-        self.photoImageView.contentMode = .scaleAspectFill
-        self.containerView.addSubview(photoImageView)
-        self.photoImageView.pinEdgesToSuperview()
+        self.coverImageView.contentMode = .scaleAspectFill
+        self.containerView.addSubview(coverImageView)
+        self.coverImageView.pinEdgesToSuperview()
         
         // title label
         let photoTitleContentView = UIView()
@@ -78,9 +79,7 @@ class AlbumCell: UICollectionViewCell {
                 titleLabel.superview?.isHidden = album.name == ""
                 
                 if let url = URL(string: album.imageURL?.extraLarge ?? "") {
-                    // TODO
-                    print(url)
-//                    photoImageView.kf.setImage(with: url)
+                    coverImageView.kf.setImage(with: url)
                 }
             }
         }

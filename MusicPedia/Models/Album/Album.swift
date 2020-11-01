@@ -16,7 +16,7 @@ struct Album: Decodable {
     // TODO: improve this
     var imageURL: SizeType? {
         get {
-            let images = self.images.filter{ $0.size == "large" && $0.size == "extralarge" }
+            let images = self.images.filter{ $0.size == "large" || $0.size == "extralarge" }
             let sizes: SizeType = (large: images.first?.url, extraLarge: images.last?.url)
             return sizes
         }
@@ -25,6 +25,7 @@ struct Album: Decodable {
     enum CodingKeys: String, CodingKey {
         case playerURL = "url"
         case images = "image"
+        case name
     }
     
     struct Image: Decodable {
@@ -33,6 +34,7 @@ struct Album: Decodable {
         
         enum CodingKeys: String, CodingKey {
             case url = "#text"
+            case size
         }
     }
 }

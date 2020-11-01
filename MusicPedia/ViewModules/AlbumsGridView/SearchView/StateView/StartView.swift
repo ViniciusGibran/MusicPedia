@@ -15,7 +15,7 @@ class StartView: UIView, StateSubviewProtocol {
     let infoLabel: UILabel = {
         let label = UILabel()
         label.textColor = .white
-        label.text = "Photogram \n Search for beautiful photos!"
+        label.text = "MusicPedia\n\nFind your loved songs!"
         label.font = .systemFont(ofSize: 24, weight: .medium)
         label.numberOfLines = 0
         label.textAlignment = .center

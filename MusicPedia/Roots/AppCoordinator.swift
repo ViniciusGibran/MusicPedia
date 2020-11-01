@@ -9,6 +9,7 @@ import UIKit
 
 protocol Coordinator: class {
     func showAlbumsGridView()
+    func showAlbumView(album: Album) 
 }
 
 class AppCoordinator: Coordinator {
@@ -26,7 +27,7 @@ class AppCoordinator: Coordinator {
         set { UIView.transition(with: self.window,
                                 duration: 0.5,
                                 options: .transitionCrossDissolve,
-                                animations: { self.window.rootViewController = newValue  },
+                                animations: { self.window.rootViewController = newValue },
                                 completion: nil) }
     }
     
@@ -39,8 +40,16 @@ class AppCoordinator: Coordinator {
         
         let headerView = HeaderView()
         
-        let albumGridView = AlbumsGridViewController.init(viewModel: viewModel, searchView: searchView, headerView: headerView)
+        let albumGridView = AlbumsGridView(viewModel: viewModel, searchView: searchView, headerView: headerView)
         
         self.currentView = albumGridView
+    }
+    
+    func showAlbumView(album: Album) {
+        let albumViewModel = AlbumViewModel(album: album)
+        let albumView = AlbumView(viewModel: albumViewModel)
+        
+        albumView.modalPresentationStyle = .fullScreen
+        self.currentView?.present(albumView, animated: true, completion: nil)
     }
 }

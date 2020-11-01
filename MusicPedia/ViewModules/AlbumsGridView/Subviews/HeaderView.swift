@@ -37,7 +37,7 @@ class HeaderView: UIView {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 26)
-        label.text = "Photogram"
+        label.text = "MusicPedia"
         label.textColor = .white
         return label
     }()
@@ -73,8 +73,9 @@ class HeaderView: UIView {
     }()
     
     private let blurView: UIVisualEffectView = {
-        let view = UIVisualEffectView(effect: UIBlurEffect(style: .light))
-        view.backgroundColor = UIColor.black.withAlphaComponent(0.3)
+        let view = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
+        view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+        view.alpha = 0.7
         return view
     }()
     

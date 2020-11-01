@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AlbumsGridViewController: RootViewController {
+class AlbumsGridView: RootViewController {
     
     // MARK: UI Componentes
     let stateView = StateView()
@@ -51,9 +51,8 @@ class AlbumsGridViewController: RootViewController {
         view.addSubview(backgroundImageView)
         backgroundImageView.pinEdgesToSuperview()
         
-        let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .extraLight))
-        visualEffectView.backgroundColor = UIColor.black.withAlphaComponent(0.3)
-        visualEffectView.alpha = 0.5
+        let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
+        visualEffectView.alpha = 0.4
         
         view.addSubview(visualEffectView)
         visualEffectView.pinEdgesToSuperview()
@@ -124,7 +123,9 @@ class AlbumsGridViewController: RootViewController {
         
         // viewModel
         viewModel.onSearchRequestSuccesEvent = { isFirstPage in
-            self.updateView(isFirstPage)
+            DispatchQueue.main.async {
+                self.updateView(isFirstPage)
+            }
         }
         
         // stateView
@@ -177,19 +178,19 @@ class AlbumsGridViewController: RootViewController {
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
-extension AlbumsGridViewController: UICollectionViewDelegateFlowLayout {
+extension AlbumsGridView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let itemSize = (collectionView.frame.width - (collectionView.contentInset.left + collectionView.contentInset.right + 10)) / 2
         return CGSize(width: itemSize, height: itemSize)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //TODO
+        navigation?.showAlbumView(album: viewModel.albums[indexPath.row])
     }
 }
 
 // MARK: - UICollectionViewDataSource
-extension AlbumsGridViewController: UICollectionViewDataSource {
+extension AlbumsGridView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.albums.count
     }
@@ -203,8 +204,9 @@ extension AlbumsGridViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         guard indexPath.row > 0 else { return }
-        let numberOfRows: Double = Double(self.viewModel.albums.count) / Double(indexPath.row)
-        if numberOfRows <= 1.5 && !viewModel.isProcessing {
+        
+        let shouldFetchData = self.viewModel.albums.count - indexPath.row <= 8
+        if shouldFetchData && !viewModel.isProcessing {
             headerView.setActivityIndicator()
             viewModel.page += 1
         }
@@ -212,17 +214,17 @@ extension AlbumsGridViewController: UICollectionViewDataSource {
 }
 
 // MARK: - WaterfallGridLayoutDelegate
-extension AlbumsGridViewController: WaterfallGridLayoutDelegate {
+extension AlbumsGridView: WaterfallGridLayoutDelegate {
     func collectionView(
         _ collectionView: UICollectionView,
         heightForPhotoAtIndexPath indexPath:IndexPath) -> CGFloat {
         //TODO: review, may not use waterfall grid
-        return CGFloat(Int.random(in: 60..<80))
+        return 160
     }
 }
 
 // MARK: - HeaderViewDelegate
-extension AlbumsGridViewController: HeaderViewDelegate {
+extension AlbumsGridView: HeaderViewDelegate {
     func shouldShowSearchView(_ show: Bool) {
         if show {
             self.stateView.updateState(.none)

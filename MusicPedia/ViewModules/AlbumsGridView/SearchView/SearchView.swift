@@ -70,7 +70,6 @@ class SearchView: RootViewController {
     }
     
     private func bindEvents() {
-        
         // viewModel
         viewModel.onGetTopTagsSuccesEvent = { tagItems in
             self.hotTagView.tagItems = tagItems

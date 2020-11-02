@@ -57,8 +57,8 @@ class AlbumsGridView: RootViewController {
         view.addSubview(visualEffectView)
         visualEffectView.pinEdgesToSuperview()
         
-        self.stateView.isUserInteractionEnabled = false
-        self.view.addSubview(stateView)
+        stateView.isUserInteractionEnabled = false
+        view.addSubview(stateView)
         stateView.pinEdgesToSuperview()
         
         let waterfallLayout = WaterfallGridLayout()
@@ -70,13 +70,13 @@ class AlbumsGridView: RootViewController {
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 5, bottom: 10, right: 5)
         view.addSubview(collectionView)
         collectionView.pinEdgesToSuperview()
-        collectionView.contentInset.top = self.headerView.maxHeight - 15
+        collectionView.contentInset.top = headerView.minHeight - 15
         collectionView.backgroundColor = .clear
         collectionView.alpha  = 0.0
         
         self.collectionView = collectionView
         
-        view.addSubview(self.headerView)
+        view.addSubview(headerView)
         headerView.pinTop()
         headerView.pinLeft()
         headerView.pinRight()
@@ -91,15 +91,16 @@ class AlbumsGridView: RootViewController {
         // headerview & searchview
         headerView.delegate = self
         
-        self.searchContainerView.addSubview(searchView.view)
-        self.searchView.view.pinEdgesToSuperview()
-        self.addChild(self.searchView)
+        searchContainerView.addSubview(searchView.view)
+        searchView.view.pinEdgesToSuperview()
+        addChild(searchView)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.bindEvents()
-        self.viewModel.loadInitialState()
+        bindEvents()
+        viewModel.loadInitialState()
+        atemptToShowStoreReview()
     }
     
     private func bindEvents() {
@@ -112,8 +113,10 @@ class AlbumsGridView: RootViewController {
         
         // searchView
         searchView.onTagSelectedEvent = { content in
-            self.headerView.setTextFieldPlaceholder(content)
-            self.makeSearch(content: content)
+            DispatchQueue.main.async {
+                self.headerView.setTextFieldPlaceholder(content)
+                self.makeSearch(content: content)
+            }
         }
         
         // stateView
@@ -130,7 +133,7 @@ class AlbumsGridView: RootViewController {
         self.headerView.setTextFieldPlaceholder(content)
         self.viewModel.search = content
         
-        self.headerView.expand()
+        self.headerView.collapse()
         self.headerView.isUserInteractionEnabled = false
         self.searchContainerView.isHidden = true
     }
@@ -216,8 +219,7 @@ extension AlbumsGridView: WaterfallGridLayoutDelegate {
     func collectionView(
         _ collectionView: UICollectionView,
         heightForPhotoAtIndexPath indexPath:IndexPath) -> CGFloat {
-        //TODO: review, may not use waterfall grid
-        return 160
+        return 200
     }
 }
 
@@ -226,11 +228,11 @@ extension AlbumsGridView: HeaderViewDelegate {
     func shouldShowSearchView(_ show: Bool) {
         if show {
             self.stateView.updateState(.none)
-            self.headerView.collapse()
+            self.headerView.expand()
             self.searchView.showAnimated()
             self.animateCollectionView(shown: false)
         } else {
-            self.headerView.expand()
+            self.headerView.collapse()
             self.view.endEditing(true)
         }
         

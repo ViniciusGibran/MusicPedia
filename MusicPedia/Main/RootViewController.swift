@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import StoreKit
 import Combine
 
 class RootViewController: UIViewController {
@@ -14,5 +15,11 @@ class RootViewController: UIViewController {
     
     var navigation: RootNavigationController? {
         get { return (UIApplication.shared.delegate as? AppDelegate)?.rootNavigation }
+    }
+    
+    func atemptToShowStoreReview() {
+        if AppSession.shared.shouldShowStoreReview {
+            SKStoreReviewController.requestReview()
+        }
     }
 }

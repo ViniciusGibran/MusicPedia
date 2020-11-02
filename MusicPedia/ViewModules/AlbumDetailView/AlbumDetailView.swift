@@ -47,7 +47,7 @@ class AlbumView: RootViewController {
     
     let albumNameLabel: UILabel = {
         let label = UILabel()
-        label.textAlignment = .center
+        label.textAlignment = .left
         label.font = .systemFont(ofSize: 16)
         label.textColor = .white
         return label
@@ -169,6 +169,7 @@ class AlbumView: RootViewController {
         containerView.addSubview(albumNameLabel)
         albumNameLabel.pinTop(40, target: coverImageView)
         albumNameLabel.pinLeft(20)
+        albumNameLabel.pinRight(20)
         
         // publish date
         containerView.addSubview(publishDateLabel)
@@ -281,25 +282,21 @@ class AlbumView: RootViewController {
         }
         
         // album name
-        self.albumNameLabel.text = "Album: \(album?.name ?? "")"
-        self.albumNameLabel.isHidden = self.albumNameLabel.text == ""
+        self.albumNameLabel.text = "Album: \(album?.name ?? "-")"
         
         // publish date
-        self.publishDateLabel.text = "Publish Date: \(album?.wiki?.published ?? "")"
-        self.publishDateLabel.isHidden = self.publishDateLabel.text == ""
+        self.publishDateLabel.text = "Publish Date: \(album?.wiki?.published ?? "-")"
         
         // tracks count
-        let tracksCount = album?.trackMetadata?.tracks?.count ?? 0
-        self.trackCountLabel.text = "Tracks: \(tracksCount)"
-        self.trackCountLabel.isHidden = tracksCount == 0
+        let trackCount = album?.trackMetadata?.tracks?.count
+        let trackCountString = trackCount != nil ? "\(trackCount!)" : "-"
+        self.trackCountLabel.text = "Tracks: \(trackCountString)"
         
         // artist name
-        self.artistNameLabel.text = "Artist: \(artist?.name ?? "")"
-        self.artistNameLabel.isHidden = self.artistNameLabel.text == ""
+        self.artistNameLabel.text = "Artist: \(artist?.name ?? "-")"
         
         // artist listener
-        self.artistListenersLabel.text = "Artist Listeners: \(artist?.stats?.listeners ?? "")"
-        self.artistListenersLabel.isHidden = self.artistListenersLabel.text == ""
+        self.artistListenersLabel.text = "Artist Listeners: \(artist?.stats?.listeners ?? "-")"
         
         // show content
         self.containerView.isHidden = false

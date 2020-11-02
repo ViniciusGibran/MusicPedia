@@ -185,7 +185,7 @@
 		26E24C9F254DC28500151CB5 /* MusicPedia */ = {
 			isa = PBXGroup;
 			children = (
-				26E24CD6254DC38A00151CB5 /* Roots */,
+				26E24CD6254DC38A00151CB5 /* Main */,
 				26E24CD5254DC38400151CB5 /* ViewModules */,
 				26E24CD4254DC37E00151CB5 /* Models */,
 				26E24CD3254DC37800151CB5 /* Resources */,
@@ -256,7 +256,7 @@
 			path = ViewModules;
 			sourceTree = "<group>";
 		};
-		26E24CD6254DC38A00151CB5 /* Roots */ = {
+		26E24CD6254DC38A00151CB5 /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				26E24CA0254DC28500151CB5 /* AppDelegate.swift */,
@@ -265,7 +265,7 @@
 				26E24CF3254DC43E00151CB5 /* RootNavigationController.swift */,
 				26E24CF4254DC43E00151CB5 /* RootViewController.swift */,
 			);
-			path = Roots;
+			path = Main;
 			sourceTree = "<group>";
 		};
 		26E24CE6254DC3A700151CB5 /* CombineCocoaPublishers */ = {
@@ -725,6 +725,7 @@
 				DEVELOPMENT_TEAM = TCUWJ83M7D;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = MusicPedia/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -746,6 +747,7 @@
 				DEVELOPMENT_TEAM = TCUWJ83M7D;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = MusicPedia/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -765,7 +767,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TCUWJ83M7D;
 				INFOPLIST_FILE = MusicPediaTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -787,7 +789,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TCUWJ83M7D;
 				INFOPLIST_FILE = MusicPediaTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

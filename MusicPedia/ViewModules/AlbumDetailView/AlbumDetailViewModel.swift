@@ -28,13 +28,13 @@ class AlbumViewModel {
     
     // MARK: Repository
     func getFullAlbumInfo() {
-        guard let album = albumInfo.album else { return } // TODO handle view state
+         // TODO handle view state
+        guard let album = albumInfo.album else { return }
         repository.getFullAlbumInfo(album: album) { result in
             switch result {
             case .success(let albumInfo):
                 self.albumInfo = albumInfo
             case .failure(let error):
-                // TODO: set view state
                 print(error.errorDescription)
             }
         }
@@ -48,7 +48,7 @@ class AlbumViewModel {
                 case .success(let value):
                     compltion(value.image)
                 case .failure(let error):
-                    // TODO
+                     // TODO handle view state
                     print("Error: \(error)")
                 }
 

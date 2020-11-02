@@ -30,7 +30,7 @@ class SearchViewModel {
                 let tagItems = tags.compactMap {$0.name}
                 self.tagItems = tagItems
             case .failure(let error):
-                // TODO: show label error
+                 // TODO handle view state
                 print(error.errorDescription)
             }
         }

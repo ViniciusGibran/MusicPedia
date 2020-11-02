@@ -15,7 +15,6 @@ struct Album: Decodable {
     let trackMetadata: TrackMetadata?
     let images: [Image]?
     
-    // TODO: improve this
     var imageURL: SizeType? {
         get {
             let images = self.images?.filter{ $0.size == "large" || $0.size == "extralarge" }

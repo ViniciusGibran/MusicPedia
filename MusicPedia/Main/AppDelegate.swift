@@ -7,7 +7,7 @@
 
 import UIKit
 
-@main
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
@@ -24,6 +24,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.makeKeyAndVisible()
         
         return true
+    }
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        AppSession.end()
+    }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        AppSession.start()
     }
 }
 

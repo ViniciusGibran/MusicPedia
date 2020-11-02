@@ -14,15 +14,12 @@ protocol HeaderViewDelegate: class {
 }
 
 class HeaderView: UIView {
-
-    private var animator: UIViewPropertyAnimator?
-    private var expandAnimator: UIViewPropertyAnimator?
     
+    // MARK: Properties
     let maxHeight: CGFloat = 130
     let minHeight: CGFloat = 85
     
     var heightConstraint: NSLayoutConstraint!
-    
     var search: String = ""
     
     weak var delegate: HeaderViewDelegate?
@@ -39,6 +36,7 @@ class HeaderView: UIView {
         label.font = .systemFont(ofSize: 26)
         label.text = "MusicPedia"
         label.textColor = .white
+        label.alpha = 0
         return label
     }()
     
@@ -74,8 +72,8 @@ class HeaderView: UIView {
     
     private let blurView: UIVisualEffectView = {
         let view = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
-        view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
-        view.alpha = 0.7
+        view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
+        view.alpha = 0.9
         return view
     }()
     
@@ -101,43 +99,42 @@ class HeaderView: UIView {
     }
     
     private func loadView() {
-        self.addSubview(self.blurView)
-        self.blurView.pinEdgesToSuperview()
+        addSubview(blurView)
+        blurView.pinEdgesToSuperview()
         
-        self.addSubview(self.titleLabel)
-        self.titleLabel.pinLeft(30.0)
-        self.titleLabel.pinBottom(55.0)
+        addSubview(titleLabel)
+        titleLabel.pinLeft(15.0)
+        titleLabel.pinBottom(55.0)
         
-        self.addSubview(self.searchTextField)
-        self.searchTextField.pinLeft(30.0)
-        self.searchTextField.pinRight(30.0)
-        self.searchTextField.pinBottom(12.0)
-        self.searchTextField.constraintHeight(36.0)
+        addSubview(searchTextField)
+        searchTextField.pinLeft(15.0)
+        searchTextField.pinRight(15.0)
+        searchTextField.pinBottom(8.0)
+        searchTextField.constraintHeight(36.0)
         
-        self.addSubview(self.searchButton)
-        self.searchButton.pinBottom(18.0)
-        self.searchButton.pinRight(36.0)
-        self.searchButton.constraintHeight(20.0)
-        self.searchButton.constraintWidth(20.0)
+        addSubview(searchButton)
+        searchButton.pinBottom(15.0)
+        searchButton.pinRight(23.0)
+        searchButton.constraintHeight(20.0)
+        searchButton.constraintWidth(20.0)
         
-        self.addSubview(activityIndicator)
-        self.activityIndicator.pinRight(30.0)
-        self.activityIndicator.pinBottom(55.0)
+        addSubview(activityIndicator)
+        activityIndicator.pinRight(30.0)
+        activityIndicator.pinBottom(55.0)
         
-        self.addSubview(self.bottomLine)
-        self.bottomLine.constraintHeight(1)
-        self.bottomLine.pinRight()
-        self.bottomLine.pinLeft()
-        self.bottomLine.pinBottom()
+        addSubview(bottomLine)
+        bottomLine.constraintHeight(1)
+        bottomLine.pinRight()
+        bottomLine.pinLeft()
+        bottomLine.pinBottom()
         
-        self.searchTextField.setPadding(14)
+        searchTextField.setPadding(14)
         
-        self.heightConstraint = self.constraintHeight(self.maxHeight)
-        self.layoutIfNeeded()
+        heightConstraint = constraintHeight(minHeight)
+        layoutIfNeeded()
     }
     
     private func setupBinds() {
-        // to improve
         searchTextField.publisher
             .map { $0 }
             .sink(receiveValue: { text in
@@ -172,7 +169,7 @@ class HeaderView: UIView {
     }
     
     func setActivityIndicator() {
-        self.activityIndicator.isHidden = !self.activityIndicator.isHidden
+        activityIndicator.isHidden = !activityIndicator.isHidden
     }
     
     func setTextFieldPlaceholder(_ placeholder: String) {
@@ -187,7 +184,7 @@ extension HeaderView: UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.delegate?.didSubmitSearch(self.search)
+        delegate?.didSubmitSearch(search)
         return true
     }
 }

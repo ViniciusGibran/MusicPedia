@@ -9,20 +9,44 @@ import UIKit
 import Kingfisher
 
 class AlbumViewModel {
+    typealias AlbumInfo = (album: Album?, artist: Artist?)
 
-    let album: Album
+    // MARK: Properties
+    var onGetFullAlbumSuccesEvent: ((Album?, Artist?) -> Void)?
+    let repository: AlbumRepositoryProtocol
     
-    init(album: Album) {
-        self.album = album
+    var albumInfo: AlbumInfo {
+        didSet {
+            onGetFullAlbumSuccesEvent?(albumInfo.album, albumInfo.artist)
+        }
     }
     
-    func fetchPhoto(compltion: @escaping ((_ imag: UIImage?,_ title: String?) -> Void)) {
-        if let urlString = album.imageURL?.extraLarge, let url = URL(string: urlString) {
+    init(repository: AlbumRepositoryProtocol, album: Album) {
+        self.repository = repository
+        self.albumInfo = (album, nil)
+    }
+    
+    // MARK: Repository
+    func getFullAlbumInfo() {
+        guard let album = albumInfo.album else { return } // TODO handle view state
+        repository.getFullAlbumInfo(album: album) { result in
+            switch result {
+            case .success(let albumInfo):
+                self.albumInfo = albumInfo
+            case .failure(let error):
+                // TODO: set view state
+                print(error.errorDescription)
+            }
+        }
+    }
+    
+    func getBackgroundCover(compltion: @escaping ((_ image: UIImage?) -> Void)) {
+        if let urlString = albumInfo.album?.imageURL?.extraLarge, let url = URL(string: urlString) {
 
             KingfisherManager.shared.retrieveImage(with: url) { result in
                 switch result {
                 case .success(let value):
-                    compltion(value.image, self.album.name)
+                    compltion(value.image)
                 case .failure(let error):
                     // TODO
                     print("Error: \(error)")

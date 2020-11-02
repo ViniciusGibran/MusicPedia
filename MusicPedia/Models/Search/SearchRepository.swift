@@ -12,11 +12,11 @@ protocol SearchRepositoryProtocol {
     func getTopTags(completion: @escaping (ResponseResult<[Tag], APIError>) -> Void)
 }
 
-// TODO: create a prper router to the apis
+// TODO: create a proper router to the apis
 class SearchRepository: APIRequest, SearchRepositoryProtocol {
         
     func getTopTags(completion: @escaping (ResponseResult<[Tag], APIError>) -> Void) {
-        let url = URL(string: "http://ws.audioscrobbler.com/2.0/?method=album.gettoptags&artist=radiohead&album=the%20bends&api_key=f94d5b07fba72d6e014d0844423a1fd4&format=json")!
+        let url = URL(string: "http://ws.audioscrobbler.com/2.0/?method=tag.getTopTags&artist=radiohead&album=the%20bends&api_key=f94d5b07fba72d6e014d0844423a1fd4&format=json")!
         
         fetchDataFrom(url: url)
             .sink(receiveCompletion: { result in
@@ -40,8 +40,8 @@ class SearchRepository: APIRequest, SearchRepositoryProtocol {
     
     func getTopAlbuns(search: String, page: Int, completion: @escaping (ResponseResult<[Album], APIError>) -> Void) {
         
-        let encondedSearch = search.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) ?? ""
-        let url = URL(string: "http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&limit=30&page=\(page)&artist=\(encondedSearch)&api_key=f94d5b07fba72d6e014d0844423a1fd4&format=json")!
+        let encondedSearch = search.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+        let url = URL(string: "http://ws.audioscrobbler.com/2.0/?method=tag.gettopalbums&limit=30&page=\(page)&tag=\(encondedSearch)&api_key=f94d5b07fba72d6e014d0844423a1fd4&format=json")!
         
         fetchDataFrom(url: url)
             .sink(receiveCompletion: { result in
@@ -50,6 +50,9 @@ class SearchRepository: APIRequest, SearchRepositoryProtocol {
                 }
             }, receiveValue: { data in
                 do {
+                    
+                    guard let responsejson = String(data: data, encoding: .utf8) else { return }
+                    print(responsejson)
                     
                     let response = try self.decoder.decode(SearchResponse.self, from: data)
                     if !response.metadata.albums.isEmpty {

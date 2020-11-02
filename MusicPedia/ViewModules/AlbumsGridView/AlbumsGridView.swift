@@ -71,9 +71,8 @@ class AlbumsGridView: RootViewController {
         view.addSubview(collectionView)
         collectionView.pinEdgesToSuperview()
         collectionView.contentInset.top = self.headerView.maxHeight - 15
-        collectionView.alpha  = 0.0
-        
         collectionView.backgroundColor = .clear
+        collectionView.alpha  = 0.0
         
         self.collectionView = collectionView
         

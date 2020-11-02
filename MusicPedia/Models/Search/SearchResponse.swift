@@ -5,12 +5,11 @@
 //  Created by Vinicius Bornholdt on 31/10/2020.
 //
 
-
 struct SearchResponse: Decodable {
     let metadata: Metadata
     
     enum CodingKeys: String, CodingKey {
-        case metadata = "topalbums"
+        case metadata = "albums"
     }
     
     struct Metadata: Decodable {

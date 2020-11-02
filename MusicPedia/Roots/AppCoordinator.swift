@@ -46,7 +46,8 @@ class AppCoordinator: Coordinator {
     }
     
     func showAlbumView(album: Album) {
-        let albumViewModel = AlbumViewModel(album: album)
+        let albumRepository = AlbumRepository()
+        let albumViewModel = AlbumViewModel(repository: albumRepository, album: album)
         let albumView = AlbumView(viewModel: albumViewModel)
         
         albumView.modalPresentationStyle = .fullScreen

@@ -40,7 +40,6 @@ class LoadingView: UIView, StateSubviewProtocol {
                 self.alpha = 1.0
             }
             self.activityIndicator.isHidden = false
-            self.startLoadingAnimation()
         }
     }
     
@@ -50,7 +49,6 @@ class LoadingView: UIView, StateSubviewProtocol {
                 self.alpha = 0.0
             }
             self.activityIndicator.isHidden = true
-            self.stopLoadingAnimation()
         }
     }
     
@@ -61,8 +59,6 @@ class LoadingView: UIView, StateSubviewProtocol {
         }
     }
     
-    weak var timer: Timer?
-    
     private func setupConstraints() {
         self.addSubview(activityIndicator)
         self.activityIndicator.centerToSuperView()
@@ -71,21 +67,4 @@ class LoadingView: UIView, StateSubviewProtocol {
         self.loadingLabel.centerHorizontally()
         self.loadingLabel.pinBottom(140)
     }
-    
-    private func startLoadingAnimation() {
-        self.loadingLabel.text = ""
-        timer = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true) { _ in
-            self.loadingLabel.text?.append(".")
-            
-            if self.loadingLabel.text == "....." {
-                self.loadingLabel.text = ""
-            }
-        }
-    }
-    
-    private func stopLoadingAnimation() {
-        timer?.invalidate()
-        timer = nil
-    }
-    
 }

@@ -8,8 +8,8 @@
 class SearchViewModel {
     
     // MARK: Properties
-    let repository: SearchRepositoryProtocol
     var onGetTopTagsSuccesEvent: (([String]) -> Void)?
+    let repository: SearchRepositoryProtocol
     
     private var tagItems: [String] = [] {
         didSet {

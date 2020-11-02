@@ -21,7 +21,7 @@ class AlbumViewModel {
         }
     }
     
-    init(repository: AlbumRepositoryProtocol, album: Album) {
+    init(repository: AlbumRepositoryProtocol, album: Album? = nil) {
         self.repository = repository
         self.albumInfo = (album, nil)
     }

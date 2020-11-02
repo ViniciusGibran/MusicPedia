@@ -15,8 +15,8 @@ class StartView: UIView, StateSubviewProtocol {
     let infoLabel: UILabel = {
         let label = UILabel()
         label.textColor = .white
-        label.text = "MusicPedia\n\nFind your loved songs!"
-        label.font = .systemFont(ofSize: 24, weight: .medium)
+        label.text = "Music Pedia\nFind your loved songs! ❤️🎶"
+        label.font = .systemFont(ofSize: 18, weight: .medium)
         label.numberOfLines = 0
         label.textAlignment = .center
         return label
@@ -49,9 +49,8 @@ class StartView: UIView, StateSubviewProtocol {
     
     private func setupConstraints() {
         self.addSubview(infoLabel)
-        self.infoLabel.pinLeft(32)
-        self.infoLabel.pinRight(32)
-        self.infoLabel.centerToSuperView()
+        self.infoLabel.pinBottom(60)
+        self.infoLabel.centerHorizontally()
     }
     
 }

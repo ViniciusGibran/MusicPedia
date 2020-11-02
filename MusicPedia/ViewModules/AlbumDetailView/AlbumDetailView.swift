@@ -149,7 +149,7 @@ class AlbumView: RootViewController {
         
         // album info container
         view.addSubview(containerView)
-        containerView.pinTop(60)
+        containerView.pinTop(80)
         containerView.pinLeft(30)
         containerView.pinRight(30)
         containerView.pinBottom(150)
@@ -216,7 +216,7 @@ class AlbumView: RootViewController {
         dismissButtonContentView.backgroundColor = UIColor.white.withAlphaComponent(0.6)
         
         self.view.addSubview(dismissButtonContentView)
-        dismissButtonContentView.pinBottom(10)
+        dismissButtonContentView.pinBottom(20)
         dismissButtonContentView.centerHorizontally()
         
         // note: for some reason pinEdges is not working here

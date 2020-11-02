@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		266E26FF25505F0100CF3388 /* ExpectationWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E26FE25505F0100CF3388 /* ExpectationWrapper.swift */; };
+		266E270225505F4A00CF3388 /* AlbumsGridViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E270125505F4A00CF3388 /* AlbumsGridViewTest.swift */; };
+		266E27032550615700CF3388 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24CA0254DC28500151CB5 /* AppDelegate.swift */; };
+		266E27052550622B00CF3388 /* SearchViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E27042550622B00CF3388 /* SearchViewTest.swift */; };
+		266E27072550725000CF3388 /* AlbumDetailViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E27062550725000CF3388 /* AlbumDetailViewTest.swift */; };
 		26E24CA1254DC28500151CB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24CA0254DC28500151CB5 /* AppDelegate.swift */; };
 		26E24CAC254DC28600151CB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26E24CAB254DC28600151CB5 /* Assets.xcassets */; };
-		26E24CBA254DC28600151CB5 /* MusicPediaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24CB9254DC28600151CB5 /* MusicPediaTests.swift */; };
 		26E24CDC254DC39C00151CB5 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24CD7254DC39C00151CB5 /* UIView+Constraints.swift */; };
 		26E24CDD254DC39C00151CB5 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24CD7254DC39C00151CB5 /* UIView+Constraints.swift */; };
 		26E24CDE254DC39C00151CB5 /* UIColor+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24CD8254DC39C00151CB5 /* UIColor+Utils.swift */; };
@@ -96,15 +100,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		266E26FE25505F0100CF3388 /* ExpectationWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpectationWrapper.swift; sourceTree = "<group>"; };
+		266E270125505F4A00CF3388 /* AlbumsGridViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsGridViewTest.swift; sourceTree = "<group>"; };
+		266E27042550622B00CF3388 /* SearchViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewTest.swift; sourceTree = "<group>"; };
+		266E27062550725000CF3388 /* AlbumDetailViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailViewTest.swift; sourceTree = "<group>"; };
 		26E24C9D254DC28500151CB5 /* MusicPedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26E24CA0254DC28500151CB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26E24CAB254DC28600151CB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26E24CB0254DC28600151CB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26E24CB5254DC28600151CB5 /* MusicPediaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicPediaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		26E24CB9254DC28600151CB5 /* MusicPediaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPediaTests.swift; sourceTree = "<group>"; };
 		26E24CBB254DC28600151CB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		26E24CC4254DC28600151CB5 /* MusicPediaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPediaUITests.swift; sourceTree = "<group>"; };
-		26E24CC6254DC28600151CB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26E24CD7254DC39C00151CB5 /* UIView+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		26E24CD8254DC39C00151CB5 /* UIColor+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Utils.swift"; sourceTree = "<group>"; };
 		26E24CD9254DC39C00151CB5 /* UITextFIeld+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextFIeld+Utils.swift"; sourceTree = "<group>"; };
@@ -167,7 +172,6 @@
 			children = (
 				26E24C9F254DC28500151CB5 /* MusicPedia */,
 				26E24CB8254DC28600151CB5 /* MusicPediaTests */,
-				26E24CC3254DC28600151CB5 /* MusicPediaUITests */,
 				26E24C9E254DC28500151CB5 /* Products */,
 				26E24D43254F034A00151CB5 /* Frameworks */,
 			);
@@ -197,19 +201,13 @@
 		26E24CB8254DC28600151CB5 /* MusicPediaTests */ = {
 			isa = PBXGroup;
 			children = (
-				26E24CB9254DC28600151CB5 /* MusicPediaTests.swift */,
+				266E27062550725000CF3388 /* AlbumDetailViewTest.swift */,
+				266E270125505F4A00CF3388 /* AlbumsGridViewTest.swift */,
+				266E27042550622B00CF3388 /* SearchViewTest.swift */,
+				266E26FE25505F0100CF3388 /* ExpectationWrapper.swift */,
 				26E24CBB254DC28600151CB5 /* Info.plist */,
 			);
 			path = MusicPediaTests;
-			sourceTree = "<group>";
-		};
-		26E24CC3254DC28600151CB5 /* MusicPediaUITests */ = {
-			isa = PBXGroup;
-			children = (
-				26E24CC4254DC28600151CB5 /* MusicPediaUITests.swift */,
-				26E24CC6254DC28600151CB5 /* Info.plist */,
-			);
-			path = MusicPediaUITests;
 			sourceTree = "<group>";
 		};
 		26E24CD2254DC35F00151CB5 /* UtilsLibs */ = {
@@ -357,10 +355,10 @@
 		26E24D1D254E5A6500151CB5 /* StateView */ = {
 			isa = PBXGroup;
 			children = (
+				26E24D32254E5C8A00151CB5 /* StartView.swift */,
 				26E24D33254E5C8A00151CB5 /* EmptyView.swift */,
 				26E24D31254E5C8A00151CB5 /* ErrorView.swift */,
 				26E24D30254E5C8A00151CB5 /* LoadingView.swift */,
-				26E24D32254E5C8A00151CB5 /* StartView.swift */,
 			);
 			path = StateView;
 			sourceTree = "<group>";
@@ -540,7 +538,9 @@
 			files = (
 				26E24D4F254F39D800151CB5 /* Tag.swift in Sources */,
 				26E24CF8254DC43E00151CB5 /* AppCoordinator.swift in Sources */,
+				266E27032550615700CF3388 /* AppDelegate.swift in Sources */,
 				26E24CF6254DC43E00151CB5 /* AppSession.swift in Sources */,
+				266E27052550622B00CF3388 /* SearchViewTest.swift in Sources */,
 				26E24D2B254E5C0700151CB5 /* StateView.swift in Sources */,
 				26E24D53254F434A00151CB5 /* AlbumRepository.swift in Sources */,
 				26E24D10254E326F00151CB5 /* AlbumsGridView.swift in Sources */,
@@ -551,13 +551,14 @@
 				26E24CE3254DC39C00151CB5 /* String+Utils.swift in Sources */,
 				26E24D05254E191900151CB5 /* Artist.swift in Sources */,
 				26E24CDF254DC39C00151CB5 /* UIColor+Utils.swift in Sources */,
+				266E270225505F4A00CF3388 /* AlbumsGridViewTest.swift in Sources */,
 				26E24CFC254DC43E00151CB5 /* RootViewController.swift in Sources */,
 				26E24CE1254DC39C00151CB5 /* UITextFIeld+Utils.swift in Sources */,
 				26E24D0A254E1A0600151CB5 /* SearchRepository.swift in Sources */,
+				266E26FF25505F0100CF3388 /* ExpectationWrapper.swift in Sources */,
 				26E24CFA254DC43E00151CB5 /* RootNavigationController.swift in Sources */,
 				26E24D56254F436700151CB5 /* AlbumResponse.swift in Sources */,
 				26E24CEA254DC3BE00151CB5 /* ButtonPublisher.swift in Sources */,
-				26E24CBA254DC28600151CB5 /* MusicPediaTests.swift in Sources */,
 				26E24D20254E5AAF00151CB5 /* SearchView.swift in Sources */,
 				26E24D02254E15BA00151CB5 /* Album.swift in Sources */,
 				26E24D23254E5AE900151CB5 /* SearchViewModel.swift in Sources */,
@@ -570,6 +571,7 @@
 				26E24CE5254DC39C00151CB5 /* WaterfallGridLayout.swift in Sources */,
 				26E24D1A254E58D000151CB5 /* AlbumCell.swift in Sources */,
 				26E24CF0254DC40A00151CB5 /* APIRequest.swift in Sources */,
+				266E27072550725000CF3388 /* AlbumDetailViewTest.swift in Sources */,
 				26E24D3B254E5C8A00151CB5 /* EmptyView.swift in Sources */,
 				26E24D3F254EF52600151CB5 /* AlbumDetailView.swift in Sources */,
 				26E24D14254E380F00151CB5 /* AlbumsGridViewModel.swift in Sources */,

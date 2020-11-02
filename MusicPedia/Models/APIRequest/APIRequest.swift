@@ -28,7 +28,7 @@ final class APIError: Error, LocalizedError {
         case unknown, apiError(reason: String), notFound
     }
     
-    private var errorType: ErrorType
+    var errorType: ErrorType
     
     init(_ errorType: APIError.ErrorType) {
         self.errorType = errorType

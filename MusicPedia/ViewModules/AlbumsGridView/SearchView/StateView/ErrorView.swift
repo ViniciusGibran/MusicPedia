@@ -14,7 +14,7 @@ class ErrorView: UIView, StateSubviewProtocol {
     
     var errorMessage: String = "Error!" {
         didSet {
-            self.errorLabel.text = "Error =( \n\n" + errorMessage
+            self.errorLabel.text = "⚠️\n" + errorMessage
         }
     }
     
@@ -24,7 +24,7 @@ class ErrorView: UIView, StateSubviewProtocol {
         label.text = "Error!"
         label.numberOfLines = 0
         label.textAlignment = .center
-        label.font = .systemFont(ofSize: 24, weight: .medium)
+        label.font = .systemFont(ofSize: 18, weight: .medium)
         return label
     }()
     
@@ -55,9 +55,8 @@ class ErrorView: UIView, StateSubviewProtocol {
     
     private func setupConstraints() {
         self.addSubview(errorLabel)
-        self.errorLabel.pinLeft(32)
-        self.errorLabel.pinRight(32)
-        self.errorLabel.centerToSuperView()
+        self.errorLabel.pinBottom(60)
+        self.errorLabel.centerHorizontally()
     }
     
 }

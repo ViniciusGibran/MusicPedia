@@ -17,7 +17,7 @@ class HeaderView: UIView {
     
     // MARK: Properties
     let maxHeight: CGFloat = 130
-    let minHeight: CGFloat = 85
+    let minHeight: CGFloat = 90
     
     var heightConstraint: NSLayoutConstraint!
     var search: String = ""
@@ -33,8 +33,8 @@ class HeaderView: UIView {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 26)
-        label.text = "MusicPedia"
+        label.font = .systemFont(ofSize: 25)
+        label.text = "Music Pedia"
         label.textColor = .white
         label.alpha = 0
         return label
@@ -104,7 +104,7 @@ class HeaderView: UIView {
         
         addSubview(titleLabel)
         titleLabel.pinLeft(15.0)
-        titleLabel.pinBottom(55.0)
+        titleLabel.pinBottom(50.0)
         
         addSubview(searchTextField)
         searchTextField.pinLeft(15.0)

@@ -35,7 +35,7 @@ class AlbumsGridViewModel {
         didSet { searchPhotos(isNextPage: false) }
     }
     
-    private var viewState: ViewState = .none {
+    var viewState: ViewState = .none {
         didSet { onStateViewChangedEvent?(viewState) }
     }
     

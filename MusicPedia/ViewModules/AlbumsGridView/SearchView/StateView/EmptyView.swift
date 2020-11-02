@@ -15,8 +15,8 @@ class EmptyView: UIView, StateSubviewProtocol {
     let notFoundlabel: UILabel = {
         let label = UILabel()
         label.textColor = .white
-        label.text = "Oops! Can't find anything for this search :(\n\n"
-        label.font = .systemFont(ofSize: 24, weight: .medium)
+        label.text = "⚠️\nCan't find anything for this search :(\n\n"
+        label.font = .systemFont(ofSize: 18, weight: .medium)
         label.numberOfLines = 0
         label.textAlignment = .center
         return label
@@ -49,9 +49,8 @@ class EmptyView: UIView, StateSubviewProtocol {
     
     private func setupConstraints() {
         self.addSubview(notFoundlabel)
-        self.notFoundlabel.pinLeft(32)
-        self.notFoundlabel.pinRight(32)
-        self.notFoundlabel.centerToSuperView()
+        self.notFoundlabel.pinBottom(60)
+        self.notFoundlabel.centerHorizontally()
     }
     
 }

@@ -22,8 +22,9 @@ class LoadingView: UIView, StateSubviewProtocol {
     
     let loadingLabel: UILabel = {
         let label = UILabel()
+        label.text = "Loading..."
         label.textColor = .white
-        label.font = .systemFont(ofSize: 30)
+        label.font = .systemFont(ofSize: 20)
         label.numberOfLines = 0
         label.textAlignment = .right
         return label
@@ -64,7 +65,7 @@ class LoadingView: UIView, StateSubviewProtocol {
         self.activityIndicator.centerToSuperView()
         
         self.addSubview(loadingLabel)
+        self.loadingLabel.pinBottom(60)
         self.loadingLabel.centerHorizontally()
-        self.loadingLabel.pinBottom(140)
     }
 }

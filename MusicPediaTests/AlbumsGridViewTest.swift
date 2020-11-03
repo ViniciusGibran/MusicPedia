@@ -35,7 +35,7 @@ fileprivate struct SearchRepository_notFound_test: SearchRepositoryProtocol {
     func getTopTags(completion: @escaping (ResponseResult<[Tag], APIError>) -> Void) {}
 }
 
-fileprivate class PhotoGridViewTest: XCTestCase {
+fileprivate class AlbumsGridViewTest: XCTestCase {
     
     var viewModel: AlbumsGridViewModel!
     var repository: SearchRepositoryProtocol = SearchRepository_success_test()

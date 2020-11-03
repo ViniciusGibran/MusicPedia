@@ -3,7 +3,6 @@
 //  MusicPedia
 //
 //  Created by Vinicius Bornholdt on 12/10/2020.
-//  Copyright © 2020 Mindera test. All rights reserved.
 //
 
 import XCTest

@@ -69,10 +69,6 @@ class AlbumRepository: APIRequest, AlbumRepositoryProtocol {
             }, receiveValue: { data in
                 do {
                     
-                    //debug only
-                    guard let responsejson = String(data: data, encoding: .utf8) else { return }
-                    print(responsejson)
-                    
                     let response = try self.decoder.decode(AlbumResponse.self, from: data)
                     if let album = response.album {
                         completion(.success(album))

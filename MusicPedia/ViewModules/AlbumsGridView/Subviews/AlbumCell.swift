@@ -35,10 +35,11 @@ class AlbumCell: UICollectionViewCell {
         // placeholder
         placeholderImageView.image = UIImage(named: "cloud-icon")
         placeholderImageView.contentMode = .scaleAspectFit
+        placeholderImageView.alpha = 0.6
         containerView.addSubview(placeholderImageView)
         placeholderImageView.centerToSuperView()
-        placeholderImageView.constraintHeight(30)
-        placeholderImageView.constraintWidth(30)
+        placeholderImageView.constraintHeight(45)
+        placeholderImageView.constraintWidth(45)
 
         // photo
         coverImageView.contentMode = .scaleAspectFill

@@ -56,7 +56,6 @@ struct Album: Decodable {
         }
     }
     
-    
     struct TrackMetadata: Decodable {
         let tracks: [Track]?
         

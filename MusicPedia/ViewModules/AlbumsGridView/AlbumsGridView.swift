@@ -70,7 +70,7 @@ class AlbumsGridView: RootViewController {
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 5, bottom: 10, right: 5)
         view.addSubview(collectionView)
         collectionView.pinEdgesToSuperview()
-        collectionView.contentInset.top = headerView.minHeight - 15
+        collectionView.contentInset.top = headerView.maxHeight - 15
         collectionView.backgroundColor = .clear
         collectionView.alpha  = 0.0
         
@@ -140,7 +140,6 @@ class AlbumsGridView: RootViewController {
     
     func updateView(_ isFirstPage: Bool) {
         if isFirstPage {
-            self.viewModel.isProcessing = false
             self.headerView.isUserInteractionEnabled = true
 
             self.collectionView?.reloadData()
@@ -163,7 +162,6 @@ class AlbumsGridView: RootViewController {
             }, completion: { _ in
                 self.headerView.setActivityIndicator()
                 self.headerView.isUserInteractionEnabled = true
-                self.viewModel.isProcessing = false
             })
         }
         self.view.endEditing(true)
@@ -188,6 +186,13 @@ extension AlbumsGridView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         navigation?.showAlbumView(album: viewModel.albums[indexPath.row])
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offSetY = -(scrollView.contentOffset.y + scrollView.contentInset.top)
+        let offSetValue = offSetY + scrollView.contentInset.top
+
+        headerView.expand(withOffSet: offSetValue)
+    }
 }
 
 // MARK: - UICollectionViewDataSource
@@ -206,8 +211,8 @@ extension AlbumsGridView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         guard indexPath.row > 0 else { return }
         
-        let shouldFetchData = self.viewModel.albums.count - indexPath.row <= 8
-        if shouldFetchData && !viewModel.isProcessing {
+        let shouldFetchData = self.viewModel.albums.count - indexPath.row <= 7
+        if shouldFetchData {
             headerView.setActivityIndicator()
             viewModel.page += 1
         }
@@ -228,11 +233,11 @@ extension AlbumsGridView: HeaderViewDelegate {
     func shouldShowSearchView(_ show: Bool) {
         if show {
             self.stateView.updateState(.none)
-            self.headerView.expand()
+            self.headerView.collapse()
             self.searchView.showAnimated()
             self.animateCollectionView(shown: false)
         } else {
-            self.headerView.collapse()
+            self.headerView.expand()
             self.view.endEditing(true)
         }
         

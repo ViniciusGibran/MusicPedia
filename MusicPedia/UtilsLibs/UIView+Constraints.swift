@@ -1,13 +1,9 @@
 //
 //  UIView+Constraints.swift
-//  MusicPedia
-//
 //  Created by Vinicius Gibran on 10/10/2020.
 //
 
 import UIKit
-
-
 
 extension UIView {
     
@@ -59,7 +55,6 @@ extension UIView {
         let constraint = self.centerXAnchor.constraint(equalTo: superview.centerXAnchor, constant: offset)
         constraint.isActive = true
         return constraint
-        
     }
     
     func centerToSuperView() {

@@ -52,5 +52,4 @@ class StartView: UIView, StateSubviewProtocol {
         self.infoLabel.pinBottom(60)
         self.infoLabel.centerHorizontally()
     }
-    
 }

@@ -64,7 +64,6 @@ class ToastView: UIView {
         self.window?.layoutIfNeeded()
         self.layoutIfNeeded()
     }
-    
 }
 
 extension ToastView {

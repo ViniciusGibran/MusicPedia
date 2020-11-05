@@ -58,7 +58,6 @@ class TagView: UIView {
         
         self.backgroundColor = .clear
     }
-    
 }
 
 extension TagView: UICollectionViewDelegateFlowLayout {

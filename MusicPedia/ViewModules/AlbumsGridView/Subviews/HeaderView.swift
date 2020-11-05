@@ -36,7 +36,7 @@ class HeaderView: UIView {
         label.font = .systemFont(ofSize: 25)
         label.text = "Music Pedia"
         label.textColor = .white
-        label.alpha = 0
+        label.alpha = 1
         return label
     }()
     
@@ -130,7 +130,7 @@ class HeaderView: UIView {
         
         searchTextField.setPadding(14)
         
-        heightConstraint = constraintHeight(minHeight)
+        heightConstraint = constraintHeight(maxHeight)
         layoutIfNeeded()
     }
     
@@ -159,13 +159,24 @@ class HeaderView: UIView {
         }, completion: nil)
     }
     
-    func expand() {
-        self.heightConstraint.constant = self.maxHeight
-        UIView.animate(withDuration: 0.25, animations: {
-            self.titleLabel.alpha = 1
-            self.superview?.layoutIfNeeded()
-            self.layoutIfNeeded()
-        }, completion: nil )
+    func expand(withOffSet offSet: CGFloat? = nil) {
+        
+        guard let offSet = offSet else {
+            self.heightConstraint.constant = self.maxHeight
+            UIView.animate(withDuration: 0.25, animations: {
+                self.titleLabel.alpha = 1
+                self.superview?.layoutIfNeeded()
+                self.layoutIfNeeded()
+            }, completion: nil )
+            
+            return
+        }
+        
+        let newHeight = max(min(offSet, maxHeight), minHeight)
+        heightConstraint.constant = newHeight
+        
+        let newAlpha = (offSet - minHeight)/minHeight
+        titleLabel.alpha = newHeight >= maxHeight - 1 ? 1 : newAlpha
     }
     
     func setActivityIndicator() {

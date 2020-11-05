@@ -36,6 +36,5 @@ class TagCell: UICollectionViewCell {
             self.titleLabel.pinEdgesToSuperview()
         }
     }
-    
 }
 

@@ -50,10 +50,10 @@ fileprivate class AlbumDetailViewTest: XCTestCase {
     func testFullAlbumInfo_success() {
         let album = Album(name: "Album")
         viewModel = AlbumViewModel(repository: repository, album: album)
-        let  expectation = ExpectationWrapper(description: "load request succes")
+        let expectation = XCTestExpectation(description: "load request succes")
         
         viewModel?.onGetFullAlbumSuccesEvent = { _, _ in
-            expectation.success()
+            expectation.fulfill()
         }
 
         viewModel.getFullAlbumInfo()

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import StoreKit
 
 fileprivate struct LocalStorageKeys {
     private init() {}
@@ -33,33 +34,26 @@ class AppSession: NSObject {
     // MARK: Properties
     // private
     private let userDefaults = UserDefaults.standard
-    private let launchTimesUntilShowStoreReview = 10
-    
-    // public
-    var shouldShowStoreReview: Bool {
-        let counter = userDefaults.integer(forKey: LocalStorageKeys.launchCount)
-        return counter == launchTimesUntilShowStoreReview
-    }
     
     // MARK: Init
     private override init() {
         super.init()
-        self.updateLaunchCount()
     }
     
     // finalize
     static func end() {
         privateShared = nil
     }
-    
-    // start
-    static func start() {
-        privateShared = AppSession()
-    }
 
     // MARK: Methods
-    private func updateLaunchCount() {
+    func atemptToShowStoreReview() {
         let counter = userDefaults.integer(forKey: LocalStorageKeys.launchCount)+1
+        
+        if counter % 10 == 0 {
+            SKStoreReviewController.requestReview()
+            return
+        }
+        
         userDefaults.set(counter, forKey: LocalStorageKeys.launchCount)
     }
 }

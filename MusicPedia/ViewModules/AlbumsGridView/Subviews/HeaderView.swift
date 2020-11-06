@@ -16,7 +16,7 @@ protocol HeaderViewDelegate: class {
 class HeaderView: UIView {
     
     // MARK: Properties
-    let maxHeight: CGFloat = 130
+    let maxHeight: CGFloat = 140
     let minHeight: CGFloat = 90
     
     var heightConstraint: NSLayoutConstraint!

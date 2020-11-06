@@ -18,18 +18,9 @@ class AlbumsGridViewModel {
     var onSearchRequestSuccesEvent: ((_ isFirstPage: Bool) -> Void)?
     var onStateViewChangedEvent: ((_ state: ViewState) -> Void)?
     
-    
     var albums: [Album] = [] {
         didSet {
             onSearchRequestSuccesEvent?(page == 1)
-        }
-    }
-    
-    var page: Int = 1 {
-        didSet {
-            if page > 1 && !isProcessing {
-                searchPhotos(isNextPage: true)
-            }
         }
     }
     
@@ -39,6 +30,14 @@ class AlbumsGridViewModel {
     
     var viewState: ViewState = .none {
         didSet { onStateViewChangedEvent?(viewState) }
+    }
+    
+    private var page: Int = 1 {
+        didSet {
+            if page > 1 && !isProcessing {
+                searchPhotos(isNextPage: true)
+            }
+        }
     }
     
     // MARK: Init
@@ -84,6 +83,10 @@ class AlbumsGridViewModel {
     
     func loadInitialState(){
         viewState = .start
+    }
+    
+    func fetchNextPage() {
+        page += 1
     }
 }
 

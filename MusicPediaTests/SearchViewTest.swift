@@ -33,10 +33,10 @@ fileprivate class SearchViewTest: XCTestCase {
     }
     
     func testTopTagRequest_success() {
-        let  expectation = ExpectationWrapper(description: "load request succes")
+        let  expectation = XCTestExpectation(description: "load request succes")
         
         viewModel?.onGetTopTagsSuccesEvent = { tagItems in
-            expectation.success()
+            expectation.fulfill()
             XCTAssert(!tagItems.isEmpty)
         }
         

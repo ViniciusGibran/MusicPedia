@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func applicationDidBecomeActive(_ application: UIApplication) {
-        AppSession.start()
+        AppSession.shared.atemptToShowStoreReview()
     }
 }
 

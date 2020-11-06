@@ -51,10 +51,10 @@ fileprivate class AlbumsGridViewTest: XCTestCase {
     }
     
     func testSearchRequest_success() {
-        let  expectation = ExpectationWrapper(description: "load request succes")
+        let  expectation = XCTestExpectation(description: "load request succes")
         
         viewModel?.onSearchRequestSuccesEvent = { _ in
-            expectation.success()
+            expectation.fulfill()
         }
         
         viewModel.search = "test"
@@ -65,12 +65,12 @@ fileprivate class AlbumsGridViewTest: XCTestCase {
         repository = SearchRepository_notFound_test()
         viewModel = AlbumsGridViewModel(repository: repository)
         
-        let  expectation = ExpectationWrapper(description: "load request notFound error")
+        let  expectation = XCTestExpectation(description: "load request notFound error")
         
         viewModel.onStateViewChangedEvent = { state in
             if case .error(let error) = state {
                 if case .notFound = error.errorType {
-                    expectation.success()
+                    expectation.fulfill()
                 }
             }
         }

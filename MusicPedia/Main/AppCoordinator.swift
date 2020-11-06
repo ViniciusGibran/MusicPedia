@@ -24,14 +24,11 @@ class AppCoordinator: Coordinator {
     
     private var currentView: UIViewController? {
         get { return window.rootViewController }
-        set { UIView.transition(with: self.window,
-                                duration: 0.5,
-                                options: .transitionCrossDissolve,
-                                animations: { self.window.rootViewController = newValue },
-                                completion: nil) }
+        set { window.rootViewController = newValue}
     }
     
     func showAlbumsGridView() {
+        // TODO: improve
         let searchRepository = SearchRepository()
         let viewModel = AlbumsGridViewModel(repository: searchRepository)
         

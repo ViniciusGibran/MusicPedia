@@ -100,7 +100,6 @@ class AlbumsGridView: RootViewController {
         super.viewDidLoad()
         bindEvents()
         viewModel.loadInitialState()
-        atemptToShowStoreReview()
     }
     
     private func bindEvents() {
@@ -214,7 +213,7 @@ extension AlbumsGridView: UICollectionViewDataSource {
         let shouldFetchData = self.viewModel.albums.count - indexPath.row <= 7
         if shouldFetchData {
             headerView.setActivityIndicator()
-            viewModel.page += 1
+            viewModel.fetchNextPage()
         }
     }
 }

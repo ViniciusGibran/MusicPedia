@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		26044F66255177D2009E33BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26044F65255177D2009E33BC /* LaunchScreen.storyboard */; };
-		266E26FF25505F0100CF3388 /* ExpectationWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E26FE25505F0100CF3388 /* ExpectationWrapper.swift */; };
 		266E270225505F4A00CF3388 /* AlbumsGridViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E270125505F4A00CF3388 /* AlbumsGridViewTest.swift */; };
 		266E27032550615700CF3388 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E24CA0254DC28500151CB5 /* AppDelegate.swift */; };
 		266E27052550622B00CF3388 /* SearchViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E27042550622B00CF3388 /* SearchViewTest.swift */; };
@@ -100,7 +99,6 @@
 
 /* Begin PBXFileReference section */
 		26044F65255177D2009E33BC /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		266E26FE25505F0100CF3388 /* ExpectationWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpectationWrapper.swift; sourceTree = "<group>"; };
 		266E270125505F4A00CF3388 /* AlbumsGridViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsGridViewTest.swift; sourceTree = "<group>"; };
 		266E27042550622B00CF3388 /* SearchViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewTest.swift; sourceTree = "<group>"; };
 		266E27062550725000CF3388 /* AlbumDetailViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailViewTest.swift; sourceTree = "<group>"; };
@@ -203,7 +201,6 @@
 				266E27062550725000CF3388 /* AlbumDetailViewTest.swift */,
 				266E270125505F4A00CF3388 /* AlbumsGridViewTest.swift */,
 				266E27042550622B00CF3388 /* SearchViewTest.swift */,
-				266E26FE25505F0100CF3388 /* ExpectationWrapper.swift */,
 				26E24CBB254DC28600151CB5 /* Info.plist */,
 			);
 			path = MusicPediaTests;
@@ -553,7 +550,6 @@
 				26E24CFC254DC43E00151CB5 /* RootViewController.swift in Sources */,
 				26E24CE1254DC39C00151CB5 /* UITextFIeld+Utils.swift in Sources */,
 				26E24D0A254E1A0600151CB5 /* SearchRepository.swift in Sources */,
-				266E26FF25505F0100CF3388 /* ExpectationWrapper.swift in Sources */,
 				26E24CFA254DC43E00151CB5 /* RootNavigationController.swift in Sources */,
 				26E24D56254F436700151CB5 /* AlbumResponse.swift in Sources */,
 				26E24CEA254DC3BE00151CB5 /* ButtonPublisher.swift in Sources */,
